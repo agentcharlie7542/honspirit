@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제품 — HORNSPIRIT 혼스피릿 · 酒之魂</title>
+  <meta name="description" content="HORNSPIRIT 혼스피릿 제품 라인. 酒之魂(Super Premium) · 酒之灵(Premium) · 酒之心(Classic)">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .product-tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      margin-bottom: 0;
+      overflow-x: auto;
+    }
+    .product-tab {
+      padding: 18px 36px;
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--gray);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      background: none;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+    }
+    .product-tab:hover { color: var(--cream); }
+    .product-tab.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+    .product-tab-zh {
+      font-family: var(--font-zh);
+      font-size: 1.25rem;
+      margin-right: 8px;
+    }
+    .product-detail { display: none; }
+    .product-detail.active { display: block; }
+    .aroma-notes {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .aroma-note {
+      display: inline-block;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--gold);
+      font-size: 0.8125rem;
+      padding: 4px 14px;
+      border-radius: 12px;
+    }
+    .pairing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .pairing-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9375rem;
+      color: var(--gray);
+    }
+    .pairing-icon { font-size: 1.25rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Age Gate -->
+  <div class="age-gate" id="ageGate">
+    <div class="age-gate-box">
+      <div class="age-gate-zh">酒之魂</div>
+      <div class="age-gate-brand">HORNSPIRIT</div>
+      <div class="gold-divider gold-divider--center"></div>
+      <h2 class="age-gate-title">만 19세 이상이십니까?</h2>
+      <p class="age-gate-desc">혼스피릿은 주류를 취급합니다.<br>법적 음주 가능 연령 확인이 필요합니다.</p>
+      <div class="age-gate-btns">
+        <button class="btn btn-primary" id="ageYes">예, 19세 이상입니다</button>
+        <button class="btn btn-outline" id="ageNo">아니오</button>
+      </div>
+      <p class="age-gate-legal">미성년자의 음주는 법으로 금지되어 있습니다.</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-main">HORNSPIRIT</span>
+        <span class="nav-logo-sub">혼스피릿 · 酒之魂</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="story.html" class="nav-link">브랜드 스토리</a></li>
+        <li><a href="products.html" class="nav-link">제품</a></li>
+        <li><a href="origin.html" class="nav-link">산지 이야기</a></li>
+        <li><a href="partners.html" class="nav-link">B2B 파트너십</a></li>
+        <li><a href="contact.html" class="nav-link">문의</a></li>
+        <li><a href="partners.html" class="btn btn-outline nav-cta">파트너십 문의</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="메뉴">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="story.html" class="nav-link">브랜드 스토리</a>
+    <a href="products.html" class="nav-link">제품</a>
+    <a href="origin.html" class="nav-link">산지 이야기</a>
+    <a href="partners.html" class="nav-link">B2B 파트너십</a>
+    <a href="contact.html" class="nav-link">문의</a>
+  </div>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-label fade-in">Our Products</p>
+        <h1 class="page-hero-title fade-in delay-1">
+          깊이 · 활기 · 따뜻함<br>
+          <span class="gold">세 가지 영혼</span>
+        </h1>
+        <div class="gold-divider fade-in delay-2"></div>
+        <p class="page-hero-desc fade-in delay-3">
+          1,300년 쑤첸의 전통이 세 가지 표정으로 당신 앞에 서다.<br>
+          당신의 순간에 맞는 영혼을 선택하세요.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <div style="background: #0a0a0a; position: sticky; top: 72px; z-index: 100; border-bottom: 1px solid rgba(201,168,76,0.1);">
+      <div class="container">
+        <div class="product-tab-bar">
+          <button class="product-tab active" data-target="0">
+            <span class="product-tab-zh">酒之魂</span> Super Premium
+          </button>
+          <button class="product-tab" data-target="1">
+            <span class="product-tab-zh">酒之灵</span> Premium
+          </button>
+          <button class="product-tab" data-target="2">
+            <span class="product-tab-zh">酒之心</span> Classic
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 酒之魂 -->
+    <section class="product-detail active" id="soul" style="padding: 80px 0;">
+      <div class="container">
+        <div class="product-detail-inner">
+          <div class="product-visual-large fade-in-left">
+            <div class="product-bottle-large">
+              <div class="product-bottle-visual product-bottle-visual--soul"></div>
+            </div>
+            <div style="text-align: center;">
+              <span class="product-badge badge--super">Super Premium</span>
+              <div class="product-zh" style="font-size: 3rem; margin-top: 16px;">酒之魂</div>
+              <div class="product-name-en" style="font-size: 1.25rem;">Soul of Liquor</div>
+              <div class="product-price" style="font-size: 2rem; margin-top: 16px;">₩380,000</div>
+            </div>
+          </div>
+          <div class="fade-in-right delay-1">
+            <p class="story-part-label">SOUL · 영혼</p>
+            <h2 class="section-title" style="margin-bottom: 8px;">불멸의 본질,<br>장기 숙성의 깊이</h2>
+            <div class="gold-divider"></div>
+            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;">
+              "수백 년 전통 양조 기법과 장기 숙성. 이 한 병에 쑤첸 천 년의 시간이 담겼습니다."
+            </p>
+            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;">
+              酒之魂은 HORNSPIRIT의 플래그십입니다. 한(恨)의 감성 — 깊고 고독한 아름다움을 담은 최상급 라인.
+              양허 공장의 오랜 숙성 원주와 전통 블렌딩 기법으로 완성되는, 진정한 프리미엄 백주.
+            </p>
+
+            <table class="product-info-table">
+              <tr><td>등급</td><td>Super Premium</td></tr>
+              <tr><td>도수</td><td>52% vol</td></tr>
+              <tr><td>용량</td><td>500ml</td></tr>
+              <tr><td>향형</td><td>농향형(浓香型)</td></tr>
+              <tr><td>원산지</td><td>중국 장쑤성 쑤첸(宿迁)</td></tr>
+              <tr><td>소비자가</td><td>₩380,000</td></tr>
+              <tr><td>타겟 채널</td><td>호텔 · 파인다이닝 · VIP 선물</td></tr>
+            </table>
+
+            <div style="margin-top: 28px;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">향미 노트</div>
+              <div class="aroma-notes">
+                <span class="aroma-note">꽃향 (花香)</span>
+                <span class="aroma-note">과실향 (果香)</span>
+                <span class="aroma-note">곡물향 (粮香)</span>
+                <span class="aroma-note">오크 뉘앙스</span>
+                <span class="aroma-note">긴 여운</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 28px;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">추천 페어링</div>
+              <div class="pairing-list">
+                <div class="pairing-item"><span class="pairing-icon">🥩</span>프라임 스테이크, 양고기 구이</div>
+                <div class="pairing-item"><span class="pairing-icon">🦞</span>랍스터, 해산물 요리</div>
+                <div class="pairing-item"><span class="pairing-icon">🎁</span>VIP 비즈니스 선물</div>
+                <div class="pairing-item"><span class="pairing-icon">⛳</span>골프 클럽 VIP 라운지</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-primary">구매 문의하기</a>
+              <a href="partners.html" class="btn btn-outline">B2B 공급 문의</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 酒之灵 -->
+    <section class="product-detail" id="spirit" style="padding: 80px 0;">
+      <div class="container">
+        <div class="product-detail-inner">
+          <div class="product-visual-large fade-in-left">
+            <div class="product-bottle-large">
+              <div class="product-bottle-visual product-bottle-visual--spirit"></div>
+            </div>
+            <div style="text-align: center;">
+              <span class="product-badge badge--premium">Premium</span>
+              <div class="product-zh" style="font-size: 3rem; color: #4ade80; margin-top: 16px;">酒之灵</div>
+              <div class="product-name-en" style="font-size: 1.25rem;">Core of Liquor</div>
+              <div class="product-price" style="font-size: 2rem; margin-top: 16px;">₩280,000</div>
+            </div>
+          </div>
+          <div class="fade-in-right delay-1">
+            <p class="story-part-label">SPIRIT · 활기</p>
+            <h2 class="section-title" style="margin-bottom: 8px;">현대적 트위스트,<br>활기찬 에너지</h2>
+            <div class="gold-divider"></div>
+            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;">
+              "젊은 감각과 정통의 만남. 오늘 밤 당신의 테이블을 빛낼 술."
+            </p>
+            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;">
+              酒之灵은 흥(興)의 감성을 담은 프리미엄 라인입니다. 활기찬 에너지와 사교적 즐거움을 위한 술.
+              48% vol의 균형 잡힌 도수로 어떤 자리에서든 빛을 발합니다.
+            </p>
+
+            <table class="product-info-table">
+              <tr><td>등급</td><td>Premium</td></tr>
+              <tr><td>도수</td><td>48% vol</td></tr>
+              <tr><td>용량</td><td>500ml</td></tr>
+              <tr><td>향형</td><td>농향형(浓香型)</td></tr>
+              <tr><td>원산지</td><td>중국 장쑤성 쑤첸(宿迁)</td></tr>
+              <tr><td>소비자가</td><td>₩280,000</td></tr>
+              <tr><td>타겟 채널</td><td>이자카야 · 바 · 골프장</td></tr>
+            </table>
+
+            <div style="margin-top: 28px;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">향미 노트</div>
+              <div class="aroma-notes">
+                <span class="aroma-note">청량감</span>
+                <span class="aroma-note">꽃향</span>
+                <span class="aroma-note">달콤한 여운</span>
+                <span class="aroma-note">부드러운 목넘김</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 28px;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">추천 페어링</div>
+              <div class="pairing-list">
+                <div class="pairing-item"><span class="pairing-icon">🍶</span>이자카야 안주, 야끼토리</div>
+                <div class="pairing-item"><span class="pairing-icon">⛳</span>골프장 클럽하우스</div>
+                <div class="pairing-item"><span class="pairing-icon">🎉</span>비즈니스 접대, 모임</div>
+                <div class="pairing-item"><span class="pairing-icon">🍻</span>바 & 라운지</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-primary">구매 문의하기</a>
+              <a href="partners.html" class="btn btn-outline">B2B 공급 문의</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 酒之心 -->
+    <section class="product-detail" id="heart" style="padding: 80px 0;">
+      <div class="container">
+        <div class="product-detail-inner">
+          <div class="product-visual-large fade-in-left">
+            <div class="product-bottle-large">
+              <div class="product-bottle-visual product-bottle-visual--heart"></div>
+            </div>
+            <div style="text-align: center;">
+              <span class="product-badge badge--classic">Classic</span>
+              <div class="product-zh" style="font-size: 3rem; color: #fb923c; margin-top: 16px;">酒之心</div>
+              <div class="product-name-en" style="font-size: 1.25rem;">Heart of Liquor</div>
+              <div class="product-price" style="font-size: 2rem; margin-top: 16px;">₩38,000</div>
+            </div>
+          </div>
+          <div class="fade-in-right delay-1">
+            <p class="story-part-label">HEART · 따뜻함</p>
+            <h2 class="section-title" style="margin-bottom: 8px;">일상의 따뜻함,<br>정통 쉽게 즐기기</h2>
+            <div class="gold-divider"></div>
+            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;">
+              "부드럽고 따뜻하게. 소중한 사람과 나누는 가장 진솔한 한 잔."
+            </p>
+            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;">
+              酒之心은 정(情)의 감성 — 따뜻한 유대와 일상의 온기를 담은 클래식 라인입니다.
+              36%의 부드러운 도수로 누구나 쉽게 백주의 매력을 경험할 수 있습니다.
+            </p>
+
+            <table class="product-info-table">
+              <tr><td>등급</td><td>Classic</td></tr>
+              <tr><td>도수</td><td>36% vol</td></tr>
+              <tr><td>용량</td><td>500ml</td></tr>
+              <tr><td>향형</td><td>농향형(浓香型)</td></tr>
+              <tr><td>원산지</td><td>중국 장쑤성 쑤첸(宿迁)</td></tr>
+              <tr><td>소비자가</td><td>₩38,000</td></tr>
+              <tr><td>타겟 채널</td><td>편의점 · 대형마트 · 식당</td></tr>
+            </table>
+
+            <div style="margin-top: 28px;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">향미 노트</div>
+              <div class="aroma-notes">
+                <span class="aroma-note">부드러운 단맛</span>
+                <span class="aroma-note">곡물의 온기</span>
+                <span class="aroma-note">깔끔한 마무리</span>
+                <span class="aroma-note">입문자 친화적</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 28px;">
+              <div style="font-size: 0.875rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">추천 페어링</div>
+              <div class="pairing-list">
+                <div class="pairing-item"><span class="pairing-icon">🥘</span>한식, 삼겹살, 갈비</div>
+                <div class="pairing-item"><span class="pairing-icon">🍜</span>짬뽕, 짜장면, 중식</div>
+                <div class="pairing-item"><span class="pairing-icon">👨‍👩‍👧</span>가족 모임, 일상 식사</div>
+                <div class="pairing-item"><span class="pairing-icon">🏪</span>편의점 야식</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-primary">구매처 안내</a>
+              <a href="partners.html" class="btn btn-outline">B2B 공급 문의</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compare Section -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #0f0a04, #0D0D0D); border-top: 1px solid rgba(201,168,76,0.1);">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <p class="section-label fade-in">Comparison</p>
+          <h2 class="section-title fade-in delay-1">제품 한눈에 비교하기</h2>
+        </div>
+        <div style="overflow-x: auto;" class="fade-in delay-2">
+          <table class="channel-table" style="min-width: 600px;">
+            <thead>
+              <tr>
+                <th>항목</th>
+                <th style="color: var(--gold);">酒之魂</th>
+                <th style="color: #4ade80;">酒之灵</th>
+                <th style="color: #fb923c;">酒之心</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>등급</td><td>Super Premium</td><td>Premium</td><td>Classic</td></tr>
+              <tr><td>도수</td><td>52% vol</td><td>48% vol</td><td>36% vol</td></tr>
+              <tr><td>용량</td><td>500ml</td><td>500ml</td><td>500ml</td></tr>
+              <tr><td>소비자가</td><td style="color:var(--gold);">₩380,000</td><td style="color:#4ade80;">₩280,000</td><td style="color:#fb923c;">₩38,000</td></tr>
+              <tr><td>감성 키워드</td><td>한(恨) · 고독의 아름다움</td><td>흥(興) · 활기찬 에너지</td><td>정(情) · 따뜻한 유대</td></tr>
+              <tr><td>주요 채널</td><td>호텔 · VIP</td><td>바 · 골프장</td><td>편의점 · 식당</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">HORNSPIRIT</div>
+          <div class="footer-brand-zh">혼스피릿 · 酒之魂 · Soul of Liquor</div>
+          <p class="footer-tagline">A Soulful Odyssey of Baijiu</p>
+          <p class="footer-company">혼스피릿 코리아 · 한국 수입 법인<br>이메일: contact@hornspirit.kr</p>
+        </div>
+        <div>
+          <div class="footer-heading">제품</div>
+          <ul class="footer-links">
+            <li><a href="products.html#soul" class="footer-link">酒之魂</a></li>
+            <li><a href="products.html#spirit" class="footer-link">酒之灵</a></li>
+            <li><a href="products.html#heart" class="footer-link">酒之心</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">브랜드</div>
+          <ul class="footer-links">
+            <li><a href="story.html" class="footer-link">브랜드 스토리</a></li>
+            <li><a href="origin.html" class="footer-link">산지 이야기</a></li>
+            <li><a href="partners.html" class="footer-link">파트너십</a></li>
+            <li><a href="contact.html" class="footer-link">문의</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">정책</div>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="footer-link">개인정보처리방침</a></li>
+            <li><a href="terms.html" class="footer-link">이용약관</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 HORNSPIRIT Co., Ltd. All rights reserved.</p>
+        <div class="footer-legal">
+          <strong>⚠ 미성년자 음주 금지 · 임신 중 음주는 태아에게 해롭습니다</strong>
+          주류는 만 19세 이상에게만 판매됩니다 · 음주운전 절대 금지
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Product tab switching
+    const tabs = document.querySelectorAll('.product-tab');
+    const sections = document.querySelectorAll('.product-detail');
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+        tab.classList.add('active');
+        sections[i].classList.add('active');
+        // Trigger animations
+        sections[i].querySelectorAll('.fade-in, .fade-in-left, .fade-in-right')
+          .forEach(el => {
+            el.classList.remove('visible');
+            setTimeout(() => el.classList.add('visible'), 50);
+          });
+      });
+    });
+
+    // Check URL hash
+    const hash = window.location.hash;
+    if (hash === '#spirit') { tabs[1].click(); }
+    else if (hash === '#heart') { tabs[2].click(); }
+  </script>
+</body>
+</html>
