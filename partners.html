@@ -219,26 +219,26 @@
                 <div class="form-grid">
                   <div class="form-group">
                     <label class="form-label">상호명 *</label>
-                    <input type="text" class="form-input" placeholder="회사명을 입력하세요" required>
+                    <input type="text" name="company" class="form-input" placeholder="회사명을 입력하세요" required>
                   </div>
                   <div class="form-group">
                     <label class="form-label">담당자명 *</label>
-                    <input type="text" class="form-input" placeholder="담당자 성함" required>
+                    <input type="text" name="name" class="form-input" placeholder="담당자 성함" required>
                   </div>
                 </div>
                 <div class="form-grid">
                   <div class="form-group">
                     <label class="form-label">연락처 *</label>
-                    <input type="tel" class="form-input" placeholder="010-0000-0000" required>
+                    <input type="tel" name="phone" class="form-input" placeholder="010-0000-0000" required>
                   </div>
                   <div class="form-group">
                     <label class="form-label">이메일 *</label>
-                    <input type="email" class="form-input" placeholder="email@company.com" required>
+                    <input type="email" name="email" class="form-input" placeholder="email@company.com" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="form-label">사업 형태 *</label>
-                  <select class="form-select" required>
+                  <select name="business_type" class="form-select" required>
                     <option value="">선택해주세요</option>
                     <option>골프장 / 골프 클럽</option>
                     <option>호텔 / 파인다이닝</option>
@@ -253,19 +253,19 @@
                   <label class="form-label">희망 제품 라인</label>
                   <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 4px;">
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; color: var(--gray); cursor: pointer;">
-                      <input type="checkbox" style="accent-color: var(--gold);"> 酒之魂 (Super Premium)
+                      <input type="checkbox" name="product_soul" value="酒之魂 (Super Premium)" style="accent-color: var(--gold);"> 酒之魂 (Super Premium)
                     </label>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; color: var(--gray); cursor: pointer;">
-                      <input type="checkbox" style="accent-color: var(--gold);"> 酒之灵 (Premium)
+                      <input type="checkbox" name="product_spirit" value="酒之灵 (Premium)" style="accent-color: var(--gold);"> 酒之灵 (Premium)
                     </label>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; color: var(--gray); cursor: pointer;">
-                      <input type="checkbox" style="accent-color: var(--gold);"> 酒之心 (Classic)
+                      <input type="checkbox" name="product_heart" value="酒之心 (Classic)" style="accent-color: var(--gold);"> 酒之心 (Classic)
                     </label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="form-label">예상 월 발주량</label>
-                  <select class="form-select">
+                  <select name="monthly_order" class="form-select">
                     <option value="">선택해주세요</option>
                     <option>10병 미만</option>
                     <option>10 ~ 50병</option>
@@ -276,7 +276,7 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label">추가 문의사항</label>
-                  <textarea class="form-textarea" placeholder="궁금하신 점이나 요청사항을 자유롭게 작성해주세요."></textarea>
+                  <textarea name="message" class="form-textarea" placeholder="궁금하신 점이나 요청사항을 자유롭게 작성해주세요."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 18px;">
                   파트너십 문의 제출하기

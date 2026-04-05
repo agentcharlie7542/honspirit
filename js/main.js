@@ -192,55 +192,71 @@ function initSmoothScroll() {
   });
 }
 
+/* ─── Formspree 공통 제출 핸들러 ─── */
+const FORMSPREE_URL = 'https://formspree.io/f/xdappwbd';
+
+function handleFormSubmit(form, successMsg) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+
+    btn.textContent = '전송 중...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+
+      if (res.ok) {
+        btn.textContent = '✓ ' + successMsg;
+        btn.style.background = 'linear-gradient(135deg, #2D6A4F, #4ade80)';
+        btn.style.color = '#fff';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 5000);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        const errMsg = data?.errors?.[0]?.message || '전송에 실패했습니다. 다시 시도해주세요.';
+        btn.textContent = '⚠ ' + errMsg;
+        btn.style.background = 'linear-gradient(135deg, #7f1d1d, #ef4444)';
+        btn.disabled = false;
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 4000);
+      }
+    } catch {
+      btn.textContent = '⚠ 네트워크 오류. 다시 시도해주세요.';
+      btn.style.background = 'linear-gradient(135deg, #7f1d1d, #ef4444)';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+      }, 4000);
+    }
+  });
+}
+
 /* ─── Partner Form ─── */
 function initPartnerForm() {
   const form = document.getElementById('partnerForm');
   if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = '제출 중...';
-    btn.disabled = true;
-
-    // Simulate submit (replace with actual EmailJS or backend call)
-    setTimeout(() => {
-      btn.textContent = '✓ 문의가 접수되었습니다';
-      btn.style.background = 'linear-gradient(135deg, #2D6A4F, #4ade80)';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 4000);
-    }, 1200);
-  });
+  handleFormSubmit(form, '파트너십 문의가 접수되었습니다');
 }
 
 /* ─── Contact Form ─── */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = '전송 중...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      btn.textContent = '✓ 메시지가 전송되었습니다';
-      btn.style.background = 'linear-gradient(135deg, #2D6A4F, #4ade80)';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 4000);
-    }, 1000);
-  });
+  handleFormSubmit(form, '메시지가 전송되었습니다');
 }
 
 /* ─── Product Tab (Products Page) ─── */

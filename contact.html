@@ -131,16 +131,16 @@
                 <div class="form-grid">
                   <div class="form-group">
                     <label class="form-label">이름 *</label>
-                    <input type="text" class="form-input" placeholder="이름을 입력하세요" required>
+                    <input type="text" name="name" class="form-input" placeholder="이름을 입력하세요" required>
                   </div>
                   <div class="form-group">
                     <label class="form-label">이메일 *</label>
-                    <input type="email" class="form-input" placeholder="email@example.com" required>
+                    <input type="email" name="email" class="form-input" placeholder="email@example.com" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="form-label">문의 유형</label>
-                  <select class="form-select">
+                  <select name="inquiry_type" class="form-select">
                     <option value="">선택해주세요</option>
                     <option>제품 구매 문의</option>
                     <option>제품 정보 문의</option>
@@ -150,11 +150,11 @@
                 </div>
                 <div class="form-group">
                   <label class="form-label">제목 *</label>
-                  <input type="text" class="form-input" placeholder="문의 제목을 입력하세요" required>
+                  <input type="text" name="subject" class="form-input" placeholder="문의 제목을 입력하세요" required>
                 </div>
                 <div class="form-group">
                   <label class="form-label">내용 *</label>
-                  <textarea class="form-textarea" placeholder="문의 내용을 자세히 작성해주세요." style="min-height: 150px;" required></textarea>
+                  <textarea name="message" class="form-textarea" placeholder="문의 내용을 자세히 작성해주세요." style="min-height: 150px;" required></textarea>
                 </div>
                 <div style="margin-bottom: 20px;">
                   <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.875rem; color: var(--gray); cursor: pointer; line-height: 1.5;">
