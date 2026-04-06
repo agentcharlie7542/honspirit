@@ -79,13 +79,13 @@
       <div class="age-gate-zh">酒之魂</div>
       <div class="age-gate-brand">HORNSPIRIT</div>
       <div class="gold-divider gold-divider--center"></div>
-      <h2 class="age-gate-title">만 19세 이상이십니까?</h2>
-      <p class="age-gate-desc">혼스피릿은 주류를 취급합니다.<br>법적 음주 가능 연령 확인이 필요합니다.</p>
+      <h2 class="age-gate-title" data-i18n="age.title">만 19세 이상이십니까?</h2>
+      <p class="age-gate-desc" data-i18n-html="age.desc">혼스피릿은 주류를 취급합니다.<br>법적 음주 가능 연령 확인이 필요합니다.</p>
       <div class="age-gate-btns">
-        <button class="btn btn-primary" id="ageYes">예, 19세 이상입니다</button>
-        <button class="btn btn-outline" id="ageNo">아니오</button>
+        <button class="btn btn-primary" id="ageYes" data-i18n="age.yes">예, 19세 이상입니다</button>
+        <button class="btn btn-outline" id="ageNo" data-i18n="age.no">아니오</button>
       </div>
-      <p class="age-gate-legal">미성년자의 음주는 법으로 금지되어 있습니다.</p>
+      <p class="age-gate-legal" data-i18n="age.legal">미성년자의 음주는 법으로 금지되어 있습니다.</p>
     </div>
   </div>
 
@@ -94,27 +94,37 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-main">HORNSPIRIT</span>
-        <span class="nav-logo-sub">혼스피릿 · 酒之魂</span>
+        <span class="nav-logo-sub" data-i18n="nav.sub">혼스피릿 · 酒之魂</span>
       </a>
       <ul class="nav-menu">
-        <li><a href="story.html" class="nav-link">브랜드 스토리</a></li>
-        <li><a href="products.html" class="nav-link">제품</a></li>
-        <li><a href="origin.html" class="nav-link">산지 이야기</a></li>
-        <li><a href="partners.html" class="nav-link">B2B 파트너십</a></li>
-        <li><a href="contact.html" class="nav-link">문의</a></li>
-        <li><a href="partners.html" class="btn btn-outline nav-cta">파트너십 문의</a></li>
+        <li><a href="story.html" class="nav-link" data-i18n="nav.story">브랜드 스토리</a></li>
+        <li><a href="products.html" class="nav-link" data-i18n="nav.products">제품</a></li>
+        <li><a href="origin.html" class="nav-link" data-i18n="nav.origin">산지 이야기</a></li>
+        <li><a href="partners.html" class="nav-link" data-i18n="nav.partners">B2B 파트너십</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">문의</a></li>
+        <li><a href="partners.html" class="btn btn-outline nav-cta" data-i18n="nav.cta">파트너십 문의</a></li>
       </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="ko">KOR</button>
+        <button class="lang-btn" data-lang="en">ENG</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
       <button class="nav-hamburger" id="navHamburger" aria-label="메뉴">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
   <div class="nav-mobile" id="navMobile">
-    <a href="story.html" class="nav-link">브랜드 스토리</a>
-    <a href="products.html" class="nav-link">제품</a>
-    <a href="origin.html" class="nav-link">산지 이야기</a>
-    <a href="partners.html" class="nav-link">B2B 파트너십</a>
-    <a href="contact.html" class="nav-link">문의</a>
+    <a href="story.html" class="nav-link" data-i18n="nav.story">브랜드 스토리</a>
+    <a href="products.html" class="nav-link" data-i18n="nav.products">제품</a>
+    <a href="origin.html" class="nav-link" data-i18n="nav.origin">산지 이야기</a>
+    <a href="partners.html" class="nav-link" data-i18n="nav.partners">B2B 파트너십</a>
+    <a href="contact.html" class="nav-link" data-i18n="nav.contact">문의</a>
+    <div class="lang-switcher" style="margin-top:16px; justify-content:center;">
+      <button class="lang-btn" data-lang="ko">KOR</button>
+      <button class="lang-btn" data-lang="en">ENG</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
   </div>
 
   <main>
@@ -122,13 +132,13 @@
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="container">
-        <p class="page-hero-label fade-in">Our Products</p>
-        <h1 class="page-hero-title fade-in delay-1">
+        <p class="page-hero-label fade-in" data-i18n="products.hero.label">Our Products</p>
+        <h1 class="page-hero-title fade-in delay-1" data-i18n-html="products.hero.title">
           깊이 · 활기 · 따뜻함<br>
           <span class="gold">세 가지 영혼</span>
         </h1>
         <div class="gold-divider fade-in delay-2"></div>
-        <p class="page-hero-desc fade-in delay-3">
+        <p class="page-hero-desc fade-in delay-3" data-i18n-html="products.hero.desc">
           1,300년 쑤첸의 전통이 세 가지 표정으로 당신 앞에 서다.<br>
           당신의 순간에 맞는 영혼을 선택하세요.
         </p>
@@ -166,13 +176,13 @@
             </div>
           </div>
           <div class="fade-in-right delay-1">
-            <p class="story-part-label">SOUL · 영혼</p>
-            <h2 class="section-title" style="margin-bottom: 8px;">불멸의 본질,<br>장기 숙성의 깊이</h2>
+            <p class="story-part-label" data-i18n="products.soul.label">SOUL · 영혼</p>
+            <h2 class="section-title" style="margin-bottom: 8px;" data-i18n-html="products.soul.title">불멸의 본질,<br>장기 숙성의 깊이</h2>
             <div class="gold-divider"></div>
-            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;">
+            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;" data-i18n="products.soul.quote">
               "수백 년 전통 양조 기법과 장기 숙성. 이 한 병에 쑤첸 천 년의 시간이 담겼습니다."
             </p>
-            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;">
+            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;" data-i18n="products.soul.desc">
               酒之魂은 HORNSPIRIT의 플래그십입니다. 한(恨)의 감성 — 깊고 고독한 아름다움을 담은 최상급 라인.
               양허 공장의 오랜 숙성 원주와 전통 블렌딩 기법으로 완성되는, 진정한 프리미엄 백주.
             </p>
@@ -209,8 +219,8 @@
             </div>
 
             <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
-              <a href="contact.html" class="btn btn-primary">구매 문의하기</a>
-              <a href="partners.html" class="btn btn-outline">B2B 공급 문의</a>
+              <a href="contact.html" class="btn btn-primary" data-i18n="products.cta.buy">구매 문의하기</a>
+              <a href="partners.html" class="btn btn-outline" data-i18n="products.cta.b2b">B2B 공급 문의</a>
             </div>
           </div>
         </div>
@@ -231,13 +241,13 @@
             </div>
           </div>
           <div class="fade-in-right delay-1">
-            <p class="story-part-label">SPIRIT · 활기</p>
-            <h2 class="section-title" style="margin-bottom: 8px;">현대적 트위스트,<br>활기찬 에너지</h2>
+            <p class="story-part-label" data-i18n="products.spirit.label">SPIRIT · 활기</p>
+            <h2 class="section-title" style="margin-bottom: 8px;" data-i18n-html="products.spirit.title">현대적 트위스트,<br>활기찬 에너지</h2>
             <div class="gold-divider"></div>
-            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;">
+            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;" data-i18n="products.spirit.quote">
               "젊은 감각과 정통의 만남. 오늘 밤 당신의 테이블을 빛낼 술."
             </p>
-            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;">
+            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;" data-i18n="products.spirit.desc">
               酒之灵은 흥(興)의 감성을 담은 프리미엄 라인입니다. 활기찬 에너지와 사교적 즐거움을 위한 술.
               48% vol의 균형 잡힌 도수로 어떤 자리에서든 빛을 발합니다.
             </p>
@@ -295,13 +305,13 @@
             </div>
           </div>
           <div class="fade-in-right delay-1">
-            <p class="story-part-label">HEART · 따뜻함</p>
-            <h2 class="section-title" style="margin-bottom: 8px;">일상의 따뜻함,<br>정통 쉽게 즐기기</h2>
+            <p class="story-part-label" data-i18n="products.heart.label">HEART · 따뜻함</p>
+            <h2 class="section-title" style="margin-bottom: 8px;" data-i18n-html="products.heart.title">일상의 따뜻함,<br>정통 쉽게 즐기기</h2>
             <div class="gold-divider"></div>
-            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;">
+            <p style="font-family: var(--font-serif); font-size: 1.125rem; color: var(--cream); line-height: 1.8; margin-bottom: 28px; font-style: italic;" data-i18n="products.heart.quote">
               "부드럽고 따뜻하게. 소중한 사람과 나누는 가장 진솔한 한 잔."
             </p>
-            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;">
+            <p style="font-size: 0.9375rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px;" data-i18n="products.heart.desc">
               酒之心은 정(情)의 감성 — 따뜻한 유대와 일상의 온기를 담은 클래식 라인입니다.
               36%의 부드러운 도수로 누구나 쉽게 백주의 매력을 경험할 수 있습니다.
             </p>
@@ -337,8 +347,8 @@
             </div>
 
             <div style="display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap;">
-              <a href="contact.html" class="btn btn-primary">구매처 안내</a>
-              <a href="partners.html" class="btn btn-outline">B2B 공급 문의</a>
+              <a href="contact.html" class="btn btn-primary" data-i18n="products.cta.buy2">구매처 안내</a>
+              <a href="partners.html" class="btn btn-outline" data-i18n="products.cta.b2b">B2B 공급 문의</a>
             </div>
           </div>
         </div>
@@ -422,6 +432,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
     // Product tab switching

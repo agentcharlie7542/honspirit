@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HORNSPIRIT 혼스피릿 — 酒之魂 · A Soulful Odyssey of Baijiu</title>
-  <meta name="description" content="5,000년 쑤첸의 역사가 한 잔에. HORNSPIRIT 혼스피릿 — 백주의 영혼을 마시다. 중국 정통 농향형 프리미엄 백주.">
+  <meta name="description" content="5,000년 쑤첸의 역사가 한 잔에. HORNSPIRIT 혼스피릿 — 백주의 영혼을 마시다.">
   <meta property="og:title" content="HORNSPIRIT 혼스피릿 — 酒之魂">
   <meta property="og:description" content="백주의 영혼을 마시다. 1,300년 쑤첸의 시간이 한 잔에.">
   <meta property="og:type" content="website">
@@ -18,18 +18,16 @@
       <div class="age-gate-zh">酒之魂</div>
       <div class="age-gate-brand">HORNSPIRIT</div>
       <div class="gold-divider gold-divider--center"></div>
-      <h2 class="age-gate-title">만 19세 이상이십니까?</h2>
-      <p class="age-gate-desc">
-        혼스피릿은 주류를 취급합니다.<br>
-        법적 음주 가능 연령 확인이 필요합니다.
+      <h2 class="age-gate-title" data-i18n="age.title">만 19세 이상이십니까?</h2>
+      <p class="age-gate-desc" data-i18n-html="age.desc">
+        혼스피릿은 주류를 취급합니다.<br>법적 음주 가능 연령 확인이 필요합니다.
       </p>
       <div class="age-gate-btns">
-        <button class="btn btn-primary" id="ageYes">예, 19세 이상입니다</button>
-        <button class="btn btn-outline" id="ageNo">아니오</button>
+        <button class="btn btn-primary" id="ageYes" data-i18n="age.yes">예, 19세 이상입니다</button>
+        <button class="btn btn-outline" id="ageNo" data-i18n="age.no">아니오</button>
       </div>
-      <p class="age-gate-legal">
-        미성년자의 음주는 법으로 금지되어 있습니다.<br>
-        주류는 성인에게만 판매됩니다.
+      <p class="age-gate-legal" data-i18n-html="age.legal">
+        미성년자의 음주는 법으로 금지되어 있습니다.<br>주류는 성인에게만 판매됩니다.
       </p>
     </div>
   </div>
@@ -39,16 +37,21 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-main">HORNSPIRIT</span>
-        <span class="nav-logo-sub">혼스피릿 · 酒之魂</span>
+        <span class="nav-logo-sub" data-i18n="nav.sub">혼스피릿 · 酒之魂</span>
       </a>
       <ul class="nav-menu">
-        <li><a href="story.html" class="nav-link">브랜드 스토리</a></li>
-        <li><a href="products.html" class="nav-link">제품</a></li>
-        <li><a href="origin.html" class="nav-link">산지 이야기</a></li>
-        <li><a href="partners.html" class="nav-link">B2B 파트너십</a></li>
-        <li><a href="contact.html" class="nav-link">문의</a></li>
-        <li><a href="partners.html" class="btn btn-outline nav-cta">파트너십 문의</a></li>
+        <li><a href="story.html" class="nav-link" data-i18n="nav.story">브랜드 스토리</a></li>
+        <li><a href="products.html" class="nav-link" data-i18n="nav.products">제품</a></li>
+        <li><a href="origin.html" class="nav-link" data-i18n="nav.origin">산지 이야기</a></li>
+        <li><a href="partners.html" class="nav-link" data-i18n="nav.partners">B2B 파트너십</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">문의</a></li>
+        <li><a href="partners.html" class="btn btn-outline nav-cta" data-i18n="nav.cta">파트너십 문의</a></li>
       </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ko">KOR</button>
+        <button class="lang-btn" data-lang="en">ENG</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+      </div>
       <button class="nav-hamburger" id="navHamburger" aria-label="메뉴">
         <span></span><span></span><span></span>
       </button>
@@ -57,12 +60,17 @@
 
   <!-- Mobile Menu -->
   <div class="nav-mobile" id="navMobile">
-    <a href="story.html" class="nav-link">브랜드 스토리</a>
-    <a href="products.html" class="nav-link">제품</a>
-    <a href="origin.html" class="nav-link">산지 이야기</a>
-    <a href="partners.html" class="nav-link">B2B 파트너십</a>
-    <a href="contact.html" class="nav-link">문의</a>
-    <a href="partners.html" class="btn btn-primary" style="text-align:center">파트너십 문의하기</a>
+    <a href="story.html" class="nav-link" data-i18n="nav.story">브랜드 스토리</a>
+    <a href="products.html" class="nav-link" data-i18n="nav.products">제품</a>
+    <a href="origin.html" class="nav-link" data-i18n="nav.origin">산지 이야기</a>
+    <a href="partners.html" class="nav-link" data-i18n="nav.partners">B2B 파트너십</a>
+    <a href="contact.html" class="nav-link" data-i18n="nav.contact">문의</a>
+    <a href="partners.html" class="btn btn-primary" style="text-align:center" data-i18n="nav.cta">파트너십 문의하기</a>
+    <div class="lang-switcher" style="justify-content:center; margin-top:8px;">
+      <button class="lang-btn active" data-lang="ko">KOR</button>
+      <button class="lang-btn" data-lang="en">ENG</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
   </div>
 
   <main>
@@ -76,19 +84,19 @@
       <div class="hero-decoration">魂</div>
 
       <div class="hero-content">
-        <div class="hero-badge">🏆 1,300년 양조의 땅, 쑤첸(宿迁) 정통 생산</div>
+        <div class="hero-badge" data-i18n="hero.badge">🏆 1,300년 양조의 땅, 쑤첸(宿迁) 정통 생산</div>
         <div class="hero-zh">酒之魂</div>
-        <h1 class="hero-title-kr">백주의 영혼</h1>
+        <h1 class="hero-title-kr" data-i18n="hero.title">백주의 영혼</h1>
         <p class="hero-en">A Soulful Odyssey of Baijiu</p>
-        <p class="hero-desc">5,000년 쑤첸의 역사가 한 잔에 담기다</p>
+        <p class="hero-desc" data-i18n="hero.desc">5,000년 쑤첸의 역사가 한 잔에 담기다</p>
         <div class="hero-ctas">
-          <a href="story.html" class="btn btn-primary">브랜드 스토리 보기</a>
-          <a href="products.html" class="btn btn-outline">제품 알아보기</a>
+          <a href="story.html" class="btn btn-primary" data-i18n="hero.cta1">브랜드 스토리 보기</a>
+          <a href="products.html" class="btn btn-outline" data-i18n="hero.cta2">제품 알아보기</a>
         </div>
         <div class="hero-trust">
-          <span class="hero-trust-item">중국 3대 백주 산지 공식 인정</span>
-          <span class="hero-trust-item">양허(洋河) 공장 파트너십</span>
-          <span class="hero-trust-item">한국 정식 수입 통관 완료</span>
+          <span class="hero-trust-item" data-i18n="hero.t1">중국 3대 백주 산지 공식 인정</span>
+          <span class="hero-trust-item" data-i18n="hero.t2">양허(洋河) 공장 파트너십</span>
+          <span class="hero-trust-item" data-i18n="hero.t3">한국 정식 수입 통관 완료</span>
         </div>
       </div>
 
@@ -101,10 +109,10 @@
     <!-- ═══ Section 2: 브랜드 철학 ═══ -->
     <section class="section section--dark">
       <div class="container" style="text-align:center; margin-bottom:56px;">
-        <p class="section-label fade-in">Brand Philosophy</p>
-        <h2 class="section-title fade-in delay-1">술 한 잔에 담긴 인간의 삶</h2>
+        <p class="section-label fade-in" data-i18n="phil.label">Brand Philosophy</p>
+        <h2 class="section-title fade-in delay-1" data-i18n="phil.title">술 한 잔에 담긴 인간의 삶</h2>
         <div class="gold-divider gold-divider--center fade-in delay-2"></div>
-        <p class="section-desc fade-in delay-3" style="margin:0 auto">
+        <p class="section-desc fade-in delay-3" style="margin:0 auto" data-i18n-html="phil.desc">
           HORNSPIRIT은 중국 전통 백주의 유구한 역사와 현대적 한국 감성을 융합합니다.<br>
           魂(혼) · 灵(령) · 心(심) — 세 가지 가치가 하나의 잔에 담깁니다.
         </p>
@@ -113,23 +121,23 @@
         <div class="philosophy-card fade-in delay-1">
           <div class="philosophy-zh">魂</div>
           <div class="philosophy-en">SOUL</div>
-          <h3 class="philosophy-title">영혼의 깊이</h3>
-          <p class="philosophy-desc">수백 년을 기다린 맛.<br>고독과 아름다움을 품은 한 잔.</p>
-          <span class="philosophy-emotion">한(恨)</span>
+          <h3 class="philosophy-title" data-i18n="phil.1.title">영혼의 깊이</h3>
+          <p class="philosophy-desc" data-i18n-html="phil.1.desc">수백 년을 기다린 맛.<br>고독과 아름다움을 품은 한 잔.</p>
+          <span class="philosophy-emotion" data-i18n="phil.1.emotion">한(恨)</span>
         </div>
         <div class="philosophy-card fade-in delay-2">
           <div class="philosophy-zh">灵</div>
           <div class="philosophy-en">SPIRIT</div>
-          <h3 class="philosophy-title">활기찬 에너지</h3>
-          <p class="philosophy-desc">오늘의 즐거움을 담아.<br>삶의 활기를 채워주는 술.</p>
-          <span class="philosophy-emotion">흥(興)</span>
+          <h3 class="philosophy-title" data-i18n="phil.2.title">활기찬 에너지</h3>
+          <p class="philosophy-desc" data-i18n-html="phil.2.desc">오늘의 즐거움을 담아.<br>삶의 활기를 채워주는 술.</p>
+          <span class="philosophy-emotion" data-i18n="phil.2.emotion">흥(興)</span>
         </div>
         <div class="philosophy-card fade-in delay-3">
           <div class="philosophy-zh">心</div>
           <div class="philosophy-en">HEART</div>
-          <h3 class="philosophy-title">따뜻한 유대</h3>
-          <p class="philosophy-desc">당신과 나를 잇는 술.<br>진솔한 열정과 인간적 온기.</p>
-          <span class="philosophy-emotion">정(情)</span>
+          <h3 class="philosophy-title" data-i18n="phil.3.title">따뜻한 유대</h3>
+          <p class="philosophy-desc" data-i18n-html="phil.3.desc">당신과 나를 잇는 술.<br>진솔한 열정과 인간적 온기.</p>
+          <span class="philosophy-emotion" data-i18n="phil.3.emotion">정(情)</span>
         </div>
       </div>
     </section>
@@ -137,29 +145,29 @@
     <!-- ═══ Section 3: Trust Bar ═══ -->
     <div class="trust-bar">
       <div class="container" style="text-align:center; margin-bottom:40px;">
-        <p class="section-label fade-in">By the Numbers</p>
-        <h2 class="section-title fade-in delay-1" style="font-size:1.75rem">숫자로 보는 신뢰</h2>
+        <p class="section-label fade-in" data-i18n="trust.label">By the Numbers</p>
+        <h2 class="section-title fade-in delay-1" style="font-size:1.75rem" data-i18n="trust.title">숫자로 보는 신뢰</h2>
       </div>
       <div class="trust-grid container">
         <div class="trust-item fade-in delay-1">
           <div class="trust-number" data-count="1300" data-suffix="년">0년</div>
-          <div class="trust-label">쑤첸 양조 역사</div>
+          <div class="trust-label" data-i18n-html="trust.1">쑤첸 양조 역사</div>
         </div>
         <div class="trust-item fade-in delay-2">
           <div class="trust-number">TOP 3</div>
-          <div class="trust-label">글로벌 백주 브랜드<br>가치 세계 순위</div>
+          <div class="trust-label" data-i18n-html="trust.2">글로벌 백주 브랜드<br>가치 세계 순위</div>
         </div>
         <div class="trust-item fade-in delay-3">
           <div class="trust-number" data-count="10" data-suffix="km²">0km²</div>
-          <div class="trust-label">쑤첸 백주<br>생산기지 규모</div>
+          <div class="trust-label" data-i18n-html="trust.3">쑤첸 백주<br>생산기지 규모</div>
         </div>
         <div class="trust-item fade-in delay-4">
           <div class="trust-number" data-count="30000" data-suffix="명">0명</div>
-          <div class="trust-label">쑤첸 주류 산업<br>종사 인원</div>
+          <div class="trust-label" data-i18n-html="trust.4">쑤첸 주류 산업<br>종사 인원</div>
         </div>
         <div class="trust-item fade-in delay-5">
           <div class="trust-number">53%vol</div>
-          <div class="trust-label">酒之魂 정통<br>농향형 도수</div>
+          <div class="trust-label" data-i18n-html="trust.5">酒之魂 정통<br>농향형 도수</div>
         </div>
       </div>
     </div>
@@ -168,8 +176,8 @@
     <section class="section section--amber">
       <div class="container">
         <div style="text-align:center; margin-bottom:56px;">
-          <p class="section-label fade-in">Our Products</p>
-          <h2 class="section-title fade-in delay-1">깊이(魂), 활기(灵), 따뜻함(心)을 선택하세요</h2>
+          <p class="section-label fade-in" data-i18n="prod.label">Our Products</p>
+          <h2 class="section-title fade-in delay-1" data-i18n="prod.title">깊이(魂), 활기(灵), 따뜻함(心)을 선택하세요</h2>
           <div class="gold-divider gold-divider--center fade-in delay-2"></div>
         </div>
         <div class="products-grid">
@@ -184,12 +192,12 @@
             <div class="product-specs">
               <span class="product-spec">52% vol</span>
               <span class="product-spec">500ml</span>
-              <span class="product-spec">농향형</span>
+              <span class="product-spec">浓香型</span>
             </div>
-            <p class="product-copy">수백 년 전통 양조 기법과 장기 숙성. 이 한 병에 쑤첸 천 년의 시간이 담겼습니다.</p>
+            <p class="product-copy" data-i18n="prod.soul.copy">수백 년 전통 양조 기법과 장기 숙성. 이 한 병에 쑤첸 천 년의 시간이 담겼습니다.</p>
             <div class="product-price">₩380,000</div>
-            <div class="product-channel">호텔 · 파인다이닝 · VIP 선물</div>
-            <a href="products.html#soul" class="btn btn-outline" style="width:100%; justify-content:center">자세히 보기</a>
+            <div class="product-channel" data-i18n="prod.soul.channel">호텔 · 파인다이닝 · VIP 선물</div>
+            <a href="products.html#soul" class="btn btn-outline" style="width:100%; justify-content:center" data-i18n="prod.detail">자세히 보기</a>
           </div>
           <!-- 酒之灵 -->
           <div class="product-card fade-in delay-2">
@@ -202,12 +210,12 @@
             <div class="product-specs">
               <span class="product-spec">48% vol</span>
               <span class="product-spec">500ml</span>
-              <span class="product-spec">농향형</span>
+              <span class="product-spec">浓香型</span>
             </div>
-            <p class="product-copy">젊은 감각과 정통의 만남. 오늘 밤 당신의 테이블을 빛낼 술.</p>
+            <p class="product-copy" data-i18n="prod.spirit.copy">젊은 감각과 정통의 만남. 오늘 밤 당신의 테이블을 빛낼 술.</p>
             <div class="product-price">₩280,000</div>
-            <div class="product-channel">이자카야 · 바 · 골프장</div>
-            <a href="products.html#spirit" class="btn btn-outline" style="width:100%; justify-content:center">자세히 보기</a>
+            <div class="product-channel" data-i18n="prod.spirit.channel">이자카야 · 바 · 골프장</div>
+            <a href="products.html#spirit" class="btn btn-outline" style="width:100%; justify-content:center" data-i18n="prod.detail">자세히 보기</a>
           </div>
           <!-- 酒之心 -->
           <div class="product-card fade-in delay-3">
@@ -220,12 +228,12 @@
             <div class="product-specs">
               <span class="product-spec">36% vol</span>
               <span class="product-spec">500ml</span>
-              <span class="product-spec">농향형</span>
+              <span class="product-spec">浓香型</span>
             </div>
-            <p class="product-copy">부드럽고 따뜻하게. 소중한 사람과 나누는 가장 진솔한 한 잔.</p>
+            <p class="product-copy" data-i18n="prod.heart.copy">부드럽고 따뜻하게. 소중한 사람과 나누는 가장 진솔한 한 잔.</p>
             <div class="product-price">₩38,000</div>
-            <div class="product-channel">편의점 · 대형마트 · 식당</div>
-            <a href="products.html#heart" class="btn btn-outline" style="width:100%; justify-content:center">자세히 보기</a>
+            <div class="product-channel" data-i18n="prod.heart.channel">편의점 · 대형마트 · 식당</div>
+            <a href="products.html#heart" class="btn btn-outline" style="width:100%; justify-content:center" data-i18n="prod.detail">자세히 보기</a>
           </div>
         </div>
       </div>
@@ -237,13 +245,12 @@
       <div class="origin-teaser-deco">宿迁</div>
       <div class="container">
         <div class="origin-teaser-content">
-          <p class="section-label fade-in-left">Origin Story</p>
-          <h2 class="origin-teaser-quote fade-in-left delay-1">
-            아일레이가 위스키의 성지이듯,<br>
-            <em>쑤첸은 백주의 성지입니다.</em>
+          <p class="section-label fade-in-left" data-i18n="origin.label">Origin Story</p>
+          <h2 class="origin-teaser-quote fade-in-left delay-1" data-i18n-html="origin.quote">
+            아일레이가 위스키의 성지이듯,<br><em>쑤첸은 백주의 성지입니다.</em>
           </h2>
           <div class="gold-divider fade-in-left delay-2"></div>
-          <p class="origin-teaser-body fade-in-left delay-3">
+          <p class="origin-teaser-body fade-in-left delay-3" data-i18n-html="origin.body">
             중국 장쑤성 쑤첸(宿迁). 5,000년 문명의 땅에서 1,300년을 이어온 양조 전통.<br>
             회하(淮河)의 맑은 물, 홍택호(洪泽湖)의 비옥한 미생물이 빚어낸 자연의 선물 —<br>
             그것이 酒之魂입니다.
@@ -251,18 +258,18 @@
           <div class="origin-stats fade-in-left delay-4">
             <div class="origin-stat">
               <strong>5,000년</strong>
-              <span>문명의 역사</span>
+              <span data-i18n="origin.s1">문명의 역사</span>
             </div>
             <div class="origin-stat">
               <strong>1,300년</strong>
-              <span>양조의 전통</span>
+              <span data-i18n="origin.s2">양조의 전통</span>
             </div>
             <div class="origin-stat">
               <strong>세계 TOP 3</strong>
-              <span>백주 산지 위상</span>
+              <span data-i18n="origin.s3">백주 산지 위상</span>
             </div>
           </div>
-          <a href="origin.html" class="btn btn-outline fade-in-left delay-5">산지 이야기 더 보기 →</a>
+          <a href="origin.html" class="btn btn-outline fade-in-left delay-5" data-i18n="origin.cta">산지 이야기 더 보기 →</a>
         </div>
       </div>
     </section>
@@ -272,49 +279,34 @@
       <div class="container">
         <div class="b2b-inner">
           <div>
-            <p class="section-label fade-in-left">B2B Partnership</p>
-            <h2 class="section-title fade-in-left delay-1">
+            <p class="section-label fade-in-left" data-i18n="b2b.label">B2B Partnership</p>
+            <h2 class="section-title fade-in-left delay-1" data-i18n-html="b2b.title">
               프리미엄 백주,<br>귀사의 테이블에<br>올려드립니다
             </h2>
             <div class="gold-divider fade-in-left delay-2"></div>
-            <p class="section-desc fade-in-left delay-3">
+            <p class="section-desc fade-in-left delay-3" data-i18n-html="b2b.desc">
               골프장 · 호텔 · 이자카야 · 면세점 파트너를 모집합니다.<br>
               채널별 맞춤 공급 조건과 전략적 파트너십을 제공합니다.
             </p>
             <div class="b2b-channels fade-in-left delay-4">
-              <div class="b2b-channel"><span class="b2b-channel-icon">⛳</span>골프장 · 클럽</div>
-              <div class="b2b-channel"><span class="b2b-channel-icon">🏨</span>호텔 · 파인다이닝</div>
-              <div class="b2b-channel"><span class="b2b-channel-icon">🍶</span>이자카야 · 바</div>
-              <div class="b2b-channel"><span class="b2b-channel-icon">🛍</span>편의점 · 마트</div>
-              <div class="b2b-channel"><span class="b2b-channel-icon">✈️</span>면세점</div>
-              <div class="b2b-channel"><span class="b2b-channel-icon">🎁</span>VIP 기프트</div>
+              <div class="b2b-channel"><span class="b2b-channel-icon">⛳</span><span data-i18n="b2b.ch1">골프장 · 클럽</span></div>
+              <div class="b2b-channel"><span class="b2b-channel-icon">🏨</span><span data-i18n="b2b.ch2">호텔 · 파인다이닝</span></div>
+              <div class="b2b-channel"><span class="b2b-channel-icon">🍶</span><span data-i18n="b2b.ch3">이자카야 · 바</span></div>
+              <div class="b2b-channel"><span class="b2b-channel-icon">🛍</span><span data-i18n="b2b.ch4">편의점 · 마트</span></div>
+              <div class="b2b-channel"><span class="b2b-channel-icon">✈️</span><span data-i18n="b2b.ch5">면세점</span></div>
+              <div class="b2b-channel"><span class="b2b-channel-icon">🎁</span><span data-i18n="b2b.ch6">VIP 기프트</span></div>
             </div>
           </div>
           <div class="b2b-right fade-in-right delay-2">
-            <h3>파트너십 혜택</h3>
+            <h3 data-i18n="b2b.box.title">파트너십 혜택</h3>
             <div class="b2b-features">
-              <div class="b2b-feature">
-                <span class="b2b-feature-check">✓</span>
-                <span>채널별 맞춤 공급 조건 및 전담 MD 지원</span>
-              </div>
-              <div class="b2b-feature">
-                <span class="b2b-feature-check">✓</span>
-                <span>현장 시음회 및 마케팅 콘텐츠 제공</span>
-              </div>
-              <div class="b2b-feature">
-                <span class="b2b-feature-check">✓</span>
-                <span>소량 발주 가능 · 정기 공급 시스템</span>
-              </div>
-              <div class="b2b-feature">
-                <span class="b2b-feature-check">✓</span>
-                <span>양허(洋河) 공장 파트너십 — 검증된 품질 관리</span>
-              </div>
-              <div class="b2b-feature">
-                <span class="b2b-feature-check">✓</span>
-                <span>한국 정식 수입 통관 완료 · 식약처 기준 적합</span>
-              </div>
+              <div class="b2b-feature"><span class="b2b-feature-check">✓</span><span data-i18n="b2b.f1">채널별 맞춤 공급 조건 및 전담 MD 지원</span></div>
+              <div class="b2b-feature"><span class="b2b-feature-check">✓</span><span data-i18n="b2b.f2">현장 시음회 및 마케팅 콘텐츠 제공</span></div>
+              <div class="b2b-feature"><span class="b2b-feature-check">✓</span><span data-i18n="b2b.f3">소량 발주 가능 · 정기 공급 시스템</span></div>
+              <div class="b2b-feature"><span class="b2b-feature-check">✓</span><span data-i18n="b2b.f4">양허(洋河) 공장 파트너십 — 검증된 품질 관리</span></div>
+              <div class="b2b-feature"><span class="b2b-feature-check">✓</span><span data-i18n="b2b.f5">한국 정식 수입 통관 완료 · 식약처 기준 적합</span></div>
             </div>
-            <a href="partners.html" class="btn btn-primary" style="width:100%; justify-content:center">파트너십 문의하기 →</a>
+            <a href="partners.html" class="btn btn-primary" style="width:100%; justify-content:center" data-i18n="b2b.cta">파트너십 문의하기 →</a>
           </div>
         </div>
       </div>
@@ -330,20 +322,16 @@
           <div class="footer-brand-logo">HORNSPIRIT</div>
           <div class="footer-brand-zh">혼스피릿 · 酒之魂 · Soul of Liquor</div>
           <p class="footer-tagline">A Soulful Odyssey of Baijiu</p>
-          <p class="footer-company">
-            혼스피릿 코리아<br>
-            한국 수입 법인<br>
-            이메일: contact@hornspirit.kr<br>
-            사업자등록번호: 000-00-00000
-          </p>
-          <div class="footer-sns" style="margin-top:20px;">
+          <p class="footer-company" data-i18n="footer.company">혼스피릿 코리아 · 한국 수입 법인</p>
+          <p style="font-size:0.8125rem; color:var(--gray-dark); margin-top:4px;">contact@hornspirit.kr</p>
+          <div class="footer-sns" style="margin-top:16px;">
             <a href="#" class="footer-sns-btn" title="인스타그램">📷</a>
             <a href="#" class="footer-sns-btn" title="유튜브">▶</a>
             <a href="#" class="footer-sns-btn" title="카카오채널">💬</a>
           </div>
         </div>
         <div>
-          <div class="footer-heading">제품</div>
+          <div class="footer-heading" data-i18n="footer.prod">제품</div>
           <ul class="footer-links">
             <li><a href="products.html#soul" class="footer-link">酒之魂 Super Premium</a></li>
             <li><a href="products.html#spirit" class="footer-link">酒之灵 Premium</a></li>
@@ -351,32 +339,33 @@
           </ul>
         </div>
         <div>
-          <div class="footer-heading">브랜드</div>
+          <div class="footer-heading" data-i18n="footer.brand">브랜드</div>
           <ul class="footer-links">
-            <li><a href="story.html" class="footer-link">브랜드 스토리</a></li>
-            <li><a href="origin.html" class="footer-link">산지 이야기</a></li>
-            <li><a href="partners.html" class="footer-link">B2B 파트너십</a></li>
-            <li><a href="contact.html" class="footer-link">문의</a></li>
+            <li><a href="story.html" class="footer-link" data-i18n="footer.story">브랜드 스토리</a></li>
+            <li><a href="origin.html" class="footer-link" data-i18n="footer.origin">산지 이야기</a></li>
+            <li><a href="partners.html" class="footer-link" data-i18n="footer.partners">파트너십</a></li>
+            <li><a href="contact.html" class="footer-link" data-i18n="footer.contact">문의</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-heading">정책</div>
+          <div class="footer-heading" data-i18n="footer.policy">정책</div>
           <ul class="footer-links">
-            <li><a href="privacy.html" class="footer-link">개인정보처리방침</a></li>
-            <li><a href="terms.html" class="footer-link">이용약관</a></li>
+            <li><a href="privacy.html" class="footer-link" data-i18n="footer.privacy">개인정보처리방침</a></li>
+            <li><a href="terms.html" class="footer-link" data-i18n="footer.terms">이용약관</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 HORNSPIRIT Co., Ltd. All rights reserved.</p>
         <div class="footer-legal">
-          <strong>⚠ 미성년자 음주 금지 · 임신 중 음주는 태아에게 해롭습니다</strong>
-          주류는 만 19세 이상에게만 판매됩니다 · 음주운전 절대 금지
+          <strong data-i18n="footer.warning">⚠ 미성년자 음주 금지 · 임신 중 음주는 태아에게 해롭습니다</strong>
+          <span data-i18n="footer.legal">주류는 만 19세 이상에게만 판매됩니다 · 음주운전 절대 금지</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
