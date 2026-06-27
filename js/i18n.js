@@ -1,5 +1,5 @@
 /* =========================================
-   HORNSPIRIT — i18n 다국어 시스템
+   HONSPIRIT — i18n 다국어 시스템
    KO (한국어) | EN (English) | ZH (中文)
    ========================================= */
 
@@ -45,7 +45,7 @@ const HS_I18N = (() => {
       /* PHILOSOPHY */
       'phil.label':      'Brand Philosophy',
       'phil.title':      '술 한 잔에 담긴 인간의 삶',
-      'phil.desc':       'HORNSPIRIT은 중국 전통 백주의 유구한 역사와 현대적 한국 감성을 융합합니다.<br>魂(혼) · 灵(령) · 心(심) — 세 가지 가치가 하나의 잔에 담깁니다.',
+      'phil.desc':       'HONSPIRIT은 중국 전통 백주의 유구한 역사와 현대적 한국 감성을 융합합니다.<br>魂(혼) · 灵(령) · 心(심) — 세 가지 가치가 하나의 잔에 담깁니다.',
       'phil.1.title':    '영혼의 깊이',
       'phil.1.desc':     '수백 년을 기다린 맛.<br>고독과 아름다움을 품은 한 잔.',
       'phil.1.emotion':  '한(恨)',
@@ -120,11 +120,11 @@ const HS_I18N = (() => {
       /* ── STORY PAGE ── */
       'story.hero.label':  'Brand Story',
       'story.hero.title':  '술 한 잔에 담긴<br><span class="gold">인간의 삶</span>',
-      'story.hero.desc':   'HORNSPIRIT은 단순한 술이 아닙니다. 중국 전통 백주의 천 년 역사와 현대 한국 감성이 만나 탄생한, 영혼의 음료입니다.',
+      'story.hero.desc':   'HONSPIRIT은 단순한 술이 아닙니다. 중국 전통 백주의 천 년 역사와 현대 한국 감성이 만나 탄생한, 영혼의 음료입니다.',
       'story.p1.label':    'Part 01',
-      'story.p1.title':    'HORNSPIRIT<br>탄생 이야기',
+      'story.p1.title':    'HONSPIRIT<br>탄생 이야기',
       'story.p1.body1':    '브랜드 창립자들은 묻었습니다. 술이 단순한 음료를 넘어설 수 있다면 — 그것은 어떤 모습일까?',
-      'story.p1.body2':    '한국의 한(恨)은 깊고 묵직한 감정의 응축입니다. 중국의 白酒는 수천 년의 역사를 한 모금에 담아냅니다. 두 문화가 만나는 지점에서 HORNSPIRIT이 태어났습니다.',
+      'story.p1.body2':    '한국의 한(恨)은 깊고 묵직한 감정의 응축입니다. 중국의 白酒는 수천 년의 역사를 한 모금에 담아냅니다. 두 문화가 만나는 지점에서 HONSPIRIT이 태어났습니다.',
       'story.p1.l1':       '술이 단순한 음료를 넘어 — 삶의 깊이(魂)를 담는다',
       'story.p1.l2':       '활기(灵)를 불어넣어 인간의 에너지를 깨운다',
       'story.p1.l3':       '열정(心)으로 사람과 사람을 잇는다',
@@ -145,8 +145,8 @@ const HS_I18N = (() => {
       'story.s6.desc':     '수석 블렌더의 손으로 완성되는 최종 향미 밸런스.',
       'story.p3.label':    'Part 03',
       'story.p3.title':    '우리가<br>선택받은 이유',
-      'story.p3.desc':     '중국 TOP3 백주 생산 파트너, 정통 원료, 검증된 품질 관리. HORNSPIRIT이 선택받는 세 가지 이유.',
-      'story.cta.title':   'HORNSPIRIT을 경험하세요',
+      'story.p3.desc':     '중국 TOP3 백주 생산 파트너, 정통 원료, 검증된 품질 관리. HONSPIRIT이 선택받는 세 가지 이유.',
+      'story.cta.title':   'HONSPIRIT을 경험하세요',
       'story.cta.desc':    '1,300년의 시간이 담긴 한 잔을 만나보세요.',
       'story.cta.btn1':    '제품 보러가기',
       'story.cta.btn2':    '산지 이야기 →',
@@ -174,7 +174,7 @@ const HS_I18N = (() => {
       'origin.i.body':     '쑤첸은 중국 3대 백주 브랜드 중 하나인 양허(洋河)의 고향이자, 세계 독주 시장에서 인정받은 백주 산업의 심장부입니다.',
       'origin.birth.title':'酒之魂의 탄생지',
       'origin.birth.quote':'혼스피릿은 이 쑤첸의 유서 깊은 공장에서 탄생합니다.<br>단순한 술이 아닌, 쑤첸의 비옥한 토양과 장인의 시간이<br>응축된 — 백주의 영혼.',
-      'origin.birth.body': '5,000년 문명의 땅, 1,300년 양조의 역사, 자연이 허락한 최상의 환경. 이 모든 것이 한 병의 HORNSPIRIT에 담겨 당신 앞에 서있습니다.',
+      'origin.birth.body': '5,000년 문명의 땅, 1,300년 양조의 역사, 자연이 허락한 최상의 환경. 이 모든 것이 한 병의 HONSPIRIT에 담겨 당신 앞에 서있습니다.',
 
       /* ── PRODUCTS PAGE ── */
       'products.hero.label': 'Our Products',
@@ -191,7 +191,7 @@ const HS_I18N = (() => {
       'products.soul.label':   'SOUL · 영혼',
       'products.soul.title':   '불멸의 본질,<br>장기 숙성의 깊이',
       'products.soul.quote':   '"수백 년 전통 양조 기법과 장기 숙성. 이 한 병에 쑤첸 천 년의 시간이 담겼습니다."',
-      'products.soul.desc':    '酒之魂은 HORNSPIRIT의 플래그십입니다. 한(恨)의 감성 — 깊고 고독한 아름다움을 담은 최상급 라인.',
+      'products.soul.desc':    '酒之魂은 HONSPIRIT의 플래그십입니다. 한(恨)의 감성 — 깊고 고독한 아름다움을 담은 최상급 라인.',
       'products.soul.channel': '호텔 · 파인다이닝 · VIP 선물',
       'products.soul.aroma':   '향미 노트',
       'products.soul.pairing': '추천 페어링',
@@ -232,7 +232,7 @@ const HS_I18N = (() => {
       /* ── CONTACT PAGE ── */
       'contact.hero.label': 'Contact Us',
       'contact.hero.title': '문의 · 구매 안내',
-      'contact.hero.desc':  '소비자 문의, 구매처 안내, SNS 채널.<br>HORNSPIRIT과 소통하세요.',
+      'contact.hero.desc':  '소비자 문의, 구매처 안내, SNS 채널.<br>HONSPIRIT과 소통하세요.',
       'contact.form.title': '소비자 문의',
       'contact.f.name':     '이름 *',
       'contact.f.email':    '이메일 *',
@@ -259,7 +259,7 @@ const HS_I18N = (() => {
       'nav.sub':      'Hornspirit · 酒之魂',
 
       'age.title':  'Are you 19 or older?',
-      'age.desc':   'HORNSPIRIT handles alcoholic beverages.<br>Age verification is required by law.',
+      'age.desc':   'HONSPIRIT handles alcoholic beverages.<br>Age verification is required by law.',
       'age.yes':    'Yes, I am 19+',
       'age.no':     'No',
       'age.legal':  'Alcohol consumption by minors is prohibited by law.<br>Alcohol is sold to adults only.',
@@ -275,7 +275,7 @@ const HS_I18N = (() => {
 
       'phil.label':      'Brand Philosophy',
       'phil.title':      'Life Itself, in Every Pour',
-      'phil.desc':       'HORNSPIRIT fuses centuries of Chinese baijiu tradition with modern Korean sensibility.<br>Soul · Spirit · Heart — three values, one glass.',
+      'phil.desc':       'HONSPIRIT fuses centuries of Chinese baijiu tradition with modern Korean sensibility.<br>Soul · Spirit · Heart — three values, one glass.',
       'phil.1.title':    'Depth of Soul',
       'phil.1.desc':     'A taste worth centuries of waiting.<br>A glass that holds solitude and beauty.',
       'phil.1.emotion':  'Han · Solitude',
@@ -329,7 +329,7 @@ const HS_I18N = (() => {
       'b2b.f5':       'Korean import clearance & MFDS compliance certified',
       'b2b.cta':      'Inquire About Partnership →',
 
-      'footer.company':  'HORNSPIRIT Korea · Official Korean Importer',
+      'footer.company':  'HONSPIRIT Korea · Official Korean Importer',
       'footer.prod':     'Products',
       'footer.brand':    'Brand',
       'footer.policy':   'Legal',
@@ -344,11 +344,11 @@ const HS_I18N = (() => {
 
       'story.hero.label': 'Brand Story',
       'story.hero.title': 'Life Itself,<br><span class="gold">in Every Pour</span>',
-      'story.hero.desc':  'HORNSPIRIT is more than a spirit. Born where a millennium of Chinese baijiu tradition meets modern Korean sensibility.',
+      'story.hero.desc':  'HONSPIRIT is more than a spirit. Born where a millennium of Chinese baijiu tradition meets modern Korean sensibility.',
       'story.p1.label':   'Part 01',
-      'story.p1.title':   'The Birth of<br>HORNSPIRIT',
+      'story.p1.title':   'The Birth of<br>HONSPIRIT',
       'story.p1.body1':   'Our founders asked: what if a drink could be more than a drink — what if it could hold the depth of a life?',
-      'story.p1.body2':   "Korea's Han is a deep, layered emotion. China's Baijiu carries millennia in every sip. HORNSPIRIT was born at the intersection of these two worlds.",
+      'story.p1.body2':   "Korea's Han is a deep, layered emotion. China's Baijiu carries millennia in every sip. HONSPIRIT was born at the intersection of these two worlds.",
       'story.p1.l1':      'Beyond a beverage — carrying the depth of life (魂)',
       'story.p1.l2':      'Infusing vitality (灵) to awaken the human spirit',
       'story.p1.l3':      'Connecting people through passion (心)',
@@ -369,8 +369,8 @@ const HS_I18N = (() => {
       'story.s6.desc':    "Final aroma balance crafted by the master blender's hands.",
       'story.p3.label':   'Part 03',
       'story.p3.title':   'Why We Are<br>Chosen',
-      'story.p3.desc':    "China's TOP 3 production partner, authentic ingredients, verified quality. Three reasons HORNSPIRIT stands apart.",
-      'story.cta.title':  'Experience HORNSPIRIT',
+      'story.p3.desc':    "China's TOP 3 production partner, authentic ingredients, verified quality. Three reasons HONSPIRIT stands apart.",
+      'story.cta.title':  'Experience HONSPIRIT',
       'story.cta.desc':   'Discover a glass that holds 1,300 years of time.',
       'story.cta.btn1':   'View Products',
       'story.cta.btn2':   'Origin Story →',
@@ -396,8 +396,8 @@ const HS_I18N = (() => {
       'origin.i.title':    'The World-Recognized<br>Capital of Baijiu',
       'origin.i.body':     "Suqian is the hometown of Yanghe, one of China's top 3 baijiu brands, and the heart of the world's recognized baijiu industry.",
       'origin.birth.title':'The Birthplace of 酒之魂',
-      'origin.birth.quote':'HORNSPIRIT is born in this storied Suqian distillery.<br>Not merely a spirit — but the soul of baijiu,<br>distilled from Suqian\'s rich earth and artisan time.',
-      'origin.birth.body': 'Five thousand years of civilization, 1,300 years of brewing heritage, the finest natural environment. All of this stands before you in one bottle of HORNSPIRIT.',
+      'origin.birth.quote':'HONSPIRIT is born in this storied Suqian distillery.<br>Not merely a spirit — but the soul of baijiu,<br>distilled from Suqian\'s rich earth and artisan time.',
+      'origin.birth.body': 'Five thousand years of civilization, 1,300 years of brewing heritage, the finest natural environment. All of this stands before you in one bottle of HONSPIRIT.',
 
       'products.hero.label': 'Our Products',
       'products.hero.title': 'Depth · Vitality · Warmth<br><span class="gold">Three Souls</span>',
@@ -413,7 +413,7 @@ const HS_I18N = (() => {
       'products.soul.label':   'SOUL · Depth',
       'products.soul.title':   'Immortal Essence,<br>Long-Aged Depth',
       'products.soul.quote':   '"Traditional brewing mastery and long aging. A millennium of Suqian time in one bottle."',
-      'products.soul.desc':    'Jiuzhihun is the HORNSPIRIT flagship — the Han (恨) sensibility of deep, solitary beauty in its finest expression.',
+      'products.soul.desc':    'Jiuzhihun is the HONSPIRIT flagship — the Han (恨) sensibility of deep, solitary beauty in its finest expression.',
       'products.soul.channel': 'Hotels · Fine Dining · VIP Gifts',
       'products.soul.aroma':   'Aroma Notes',
       'products.soul.pairing': 'Pairing Suggestions',
@@ -452,7 +452,7 @@ const HS_I18N = (() => {
 
       'contact.hero.label': 'Contact Us',
       'contact.hero.title': 'Contact & Purchase',
-      'contact.hero.desc':  'Consumer inquiries, purchase locations, and SNS channels.<br>Get in touch with HORNSPIRIT.',
+      'contact.hero.desc':  'Consumer inquiries, purchase locations, and SNS channels.<br>Get in touch with HONSPIRIT.',
       'contact.form.title': 'Consumer Inquiry',
       'contact.f.name':     'Name *',
       'contact.f.email':    'Email *',
@@ -479,7 +479,7 @@ const HS_I18N = (() => {
       'nav.sub':      '魂斯皮利特 · 酒之魂',
 
       'age.title':  '您是否已满19周岁？',
-      'age.desc':   'HORNSPIRIT涉及酒类产品。<br>需要确认您的法定饮酒年龄。',
+      'age.desc':   'HONSPIRIT涉及酒类产品。<br>需要确认您的法定饮酒年龄。',
       'age.yes':    '是，我已满19岁',
       'age.no':     '否',
       'age.legal':  '未成年人饮酒违法。<br>酒类产品仅向成年人销售。',
@@ -495,7 +495,7 @@ const HS_I18N = (() => {
 
       'phil.label':      '品牌理念',
       'phil.title':      '每一杯，皆是人生',
-      'phil.desc':       'HORNSPIRIT 融合中国白酒的千年历史与现代韩国感性。<br>魂 · 灵 · 心 — 三种价值，一杯之中。',
+      'phil.desc':       'HONSPIRIT 融合中国白酒的千年历史与现代韩国感性。<br>魂 · 灵 · 心 — 三种价值，一杯之中。',
       'phil.1.title':    '灵魂之深',
       'phil.1.desc':     '等待数百年的味道。<br>蕴含孤独与美丽的一杯。',
       'phil.1.emotion':  '恨 · 深沉',
@@ -549,7 +549,7 @@ const HS_I18N = (() => {
       'b2b.f5':       '韩国正规进口通关完成 · 符合食药处标准',
       'b2b.cta':      '立即咨询合作 →',
 
-      'footer.company':  'HORNSPIRIT Korea · 韩国进口法人',
+      'footer.company':  'HONSPIRIT Korea · 韩国进口法人',
       'footer.prod':     '产品',
       'footer.brand':    '品牌',
       'footer.policy':   '法律条款',
@@ -564,11 +564,11 @@ const HS_I18N = (() => {
 
       'story.hero.label': '品牌故事',
       'story.hero.title': '每一杯，<br><span class="gold">皆是人生</span>',
-      'story.hero.desc':  'HORNSPIRIT不仅仅是一款白酒。它诞生于中国千年白酒传统与现代韩国感性的交汇之处。',
+      'story.hero.desc':  'HONSPIRIT不仅仅是一款白酒。它诞生于中国千年白酒传统与现代韩国感性的交汇之处。',
       'story.p1.label':   '第一章',
-      'story.p1.title':   'HORNSPIRIT<br>的诞生',
+      'story.p1.title':   'HONSPIRIT<br>的诞生',
       'story.p1.body1':   '我们的创始人曾问道：如果一杯酒能超越饮料本身——它将承载怎样的意义？',
-      'story.p1.body2':   '韩国的"恨"是深沉凝练的情感积淀。中国白酒则将数千年历史凝于一口之中。HORNSPIRIT诞生于这两种文化的交汇之处。',
+      'story.p1.body2':   '韩国的"恨"是深沉凝练的情感积淀。中国白酒则将数千年历史凝于一口之中。HONSPIRIT诞生于这两种文化的交汇之处。',
       'story.p1.l1':      '超越饮料——承载生命之深度（魂）',
       'story.p1.l2':      '注入活力（灵），唤醒人类的生命力',
       'story.p1.l3':      '以热情（心）连接人与人',
@@ -589,8 +589,8 @@ const HS_I18N = (() => {
       'story.s6.desc':    '由首席调酒师亲手完成最终香气平衡。',
       'story.p3.label':   '第三章',
       'story.p3.title':   '我们被选择<br>的理由',
-      'story.p3.desc':    '中国TOP3白酒生产合作伙伴、正宗原料、有保障的品质管控——HORNSPIRIT被选择的三大理由。',
-      'story.cta.title':  '体验HORNSPIRIT',
+      'story.p3.desc':    '中国TOP3白酒生产合作伙伴、正宗原料、有保障的品质管控——HONSPIRIT被选择的三大理由。',
+      'story.cta.title':  '体验HONSPIRIT',
       'story.cta.desc':   '探寻承载一千三百年时光的那一杯。',
       'story.cta.btn1':   '查看产品',
       'story.cta.btn2':   '产地故事 →',
@@ -616,8 +616,8 @@ const HS_I18N = (() => {
       'origin.i.title':    '世界公认的<br>白酒之都',
       'origin.i.body':     '宿迁是中国三大白酒品牌之一洋河的故乡，也是全球公认的白酒产业核心。',
       'origin.birth.title':'酒之魂的诞生地',
-      'origin.birth.quote':'HORNSPIRIT诞生于这座宿迁历史悠久的酒厂。<br>不仅仅是一瓶酒——而是宿迁沃土与匠人时光<br>凝聚而成的白酒之魂。',
-      'origin.birth.body': '五千年文明的土地，一千三百年酿造的历史，大自然赐予的最佳环境。这一切，都凝聚于一瓶HORNSPIRIT之中，呈现于您面前。',
+      'origin.birth.quote':'HONSPIRIT诞生于这座宿迁历史悠久的酒厂。<br>不仅仅是一瓶酒——而是宿迁沃土与匠人时光<br>凝聚而成的白酒之魂。',
+      'origin.birth.body': '五千年文明的土地，一千三百年酿造的历史，大自然赐予的最佳环境。这一切，都凝聚于一瓶HONSPIRIT之中，呈现于您面前。',
 
       'products.hero.label': '我们的产品',
       'products.hero.title': '深邃 · 活力 · 温情<br><span class="gold">三种灵魂</span>',
@@ -633,7 +633,7 @@ const HS_I18N = (() => {
       'products.soul.label':   '魂 · 深邃',
       'products.soul.title':   '不朽之本质，<br>长期陈酿之深度',
       'products.soul.quote':   '"传统酿造工艺与长期陈酿。一瓶之中，承载宿迁千年时光。"',
-      'products.soul.desc':    '酒之魂是HORNSPIRIT的旗舰产品。承载"恨"的感性——深沉、孤独之美的极致表达。',
+      'products.soul.desc':    '酒之魂是HONSPIRIT的旗舰产品。承载"恨"的感性——深沉、孤独之美的极致表达。',
       'products.soul.channel': '高档酒店 · 精致餐厅 · VIP礼品',
       'products.soul.aroma':   '香气描述',
       'products.soul.pairing': '搭配建议',
@@ -672,7 +672,7 @@ const HS_I18N = (() => {
 
       'contact.hero.label': '联系我们',
       'contact.hero.title': '咨询 · 购买指南',
-      'contact.hero.desc':  '消费者咨询、购买渠道及社交媒体。<br>与HORNSPIRIT取得联系。',
+      'contact.hero.desc':  '消费者咨询、购买渠道及社交媒体。<br>与HONSPIRIT取得联系。',
       'contact.form.title': '消费者咨询',
       'contact.f.name':     '姓名 *',
       'contact.f.email':    '电子邮件 *',
