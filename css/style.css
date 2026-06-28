@@ -606,6 +606,20 @@ h1, h2, h3, h4 {
 }
 
 /* ─── Philosophy (魂 灵 心) ─── */
+.philosophy-sec { position: relative; overflow: hidden; }
+.philosophy-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/total.jpeg') center center / cover no-repeat;
+  opacity: 0.1;
+  filter: grayscale(0.2);
+  z-index: 0;
+  pointer-events: none;
+}
+.philosophy-sec > * { position: relative; z-index: 1; }
+.philosophy-sec .philosophy-card { background: rgba(22,18,13,0.78); }
+
 .philosophy-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
