@@ -33,7 +33,7 @@ const HS_I18N = (() => {
       'age.legal':  '미성년자의 음주는 법으로 금지되어 있습니다.<br>주류는 성인에게만 판매됩니다.',
 
       /* HERO */
-      'hero.badge': '🏆 1,300년 양조의 땅, 쑤첸(宿迁) 정통 생산',
+      'hero.badge': '1,300년 양조의 땅, 쑤첸(宿迁) 정통 생산',
       'hero.title': '백주의 영혼',
       'hero.desc':  '5,000년 쑤첸의 역사가 한 잔에 담기다',
       'hero.cta1':  '브랜드 스토리 보기',
@@ -85,6 +85,11 @@ const HS_I18N = (() => {
       'origin.s3':     '백주 산지 위상',
       'origin.cta':    '산지 이야기 더 보기 →',
 
+      /* SUQIAN ORIGIN SECTION */
+      'suqian.eyebrow': '01 — Origin of Spirit 宿迁',
+      'suqian.title':   '백주의 성지,<br>쑤첸(宿遷)의 혼을 담다',
+      'suqian.body':    '피트 향의 성지 아일레이가 싱글 몰트의 전설을 쓰듯, 중국의 ‘백주 삼각지대’ 쑤첸은 천 년의 물길과 미생물이 빚어낸 백주의 성소입니다.<br><br><em>‘주지(酒之)’</em>는 이 유구한 역사의 중심이자, 중국 굴지의 양조 전통을 지킨 쑤첸의 고도(古都) 공장에서 탄생합니다.<br><br>단순한 술을 넘어 쑤첸의 비옥한 토양과 장인의 시간이 응축된 <em>‘주지’</em>는, 양허(洋河)로 대표되는 지역적 정통성에 현대적 감각의 스토리텔링을 더해 가장 귀한 ‘백주의 영혼적 여정’을 선사합니다. 쑤첸이 간직한 백주의 본질, 그 깊은 울림이 이제 <em>‘주지’</em>를 통해 세계로 흐릅니다.',
+
       /* B2B BANNER */
       'b2b.label':    'B2B Partnership',
       'b2b.title':    '프리미엄 백주,<br>귀사의 테이블에<br>올려드립니다',
@@ -114,7 +119,7 @@ const HS_I18N = (() => {
       'footer.origin':   '산지 이야기',
       'footer.partners': '파트너십',
       'footer.contact':  '문의',
-      'footer.warning':  '⚠ 미성년자 음주 금지 · 임신 중 음주는 태아에게 해롭습니다',
+      'footer.warning':  '미성년자 음주 금지 · 임신 중 음주는 태아에게 해롭습니다',
       'footer.legal':    '주류는 만 19세 이상에게만 판매됩니다 · 음주운전 절대 금지',
 
       /* ── STORY PAGE ── */
@@ -264,7 +269,7 @@ const HS_I18N = (() => {
       'age.no':     'No',
       'age.legal':  'Alcohol consumption by minors is prohibited by law.<br>Alcohol is sold to adults only.',
 
-      'hero.badge': '🏆 Authentically Produced in Suqian — 1,300 Years of Brewing History',
+      'hero.badge': 'Authentically Produced in Suqian — 1,300 Years of Brewing History',
       'hero.title': 'Soul of Baijiu',
       'hero.desc':  '5,000 years of Suqian heritage, distilled into one glass',
       'hero.cta1':  'View Brand Story',
@@ -312,6 +317,11 @@ const HS_I18N = (() => {
       'origin.s3':     "World's baijiu prestige",
       'origin.cta':    'Read the Full Origin Story →',
 
+      /* SUQIAN ORIGIN SECTION */
+      'suqian.eyebrow': '01 — Origin of Spirit 宿迁',
+      'suqian.title':   'The Sacred Land of Baijiu,<br>The Soul of Suqian',
+      'suqian.body':    'Just as Islay writes the legend of single malt, Suqian — China’s “Baijiu Triangle” — is a sanctuary of baijiu shaped by a thousand years of waterways and microbial terroir.<br><br><em>‘Jiu Zhi (酒之)’</em> is born at the heart of this storied history, in an ancient Suqian distillery that has safeguarded one of China’s foremost brewing traditions.<br><br>More than mere liquor, <em>‘Jiu Zhi’</em> distills Suqian’s fertile soil and the artisan’s time — pairing the regional authenticity epitomized by Yanghe with a modern sense of storytelling to offer the rarest “soulful odyssey of baijiu.” The essence Suqian has long preserved now flows to the world through <em>‘Jiu Zhi.’</em>',
+
       'b2b.label':    'B2B Partnership',
       'b2b.title':    'Premium Baijiu,<br>For Your<br>Establishment',
       'b2b.desc':     'Recruiting partners across golf clubs, hotels, izakaya, and duty-free.<br>Channel-specific supply terms and strategic partnership support.',
@@ -339,7 +349,7 @@ const HS_I18N = (() => {
       'footer.origin':   'Origin Story',
       'footer.partners': 'Partnership',
       'footer.contact':  'Contact',
-      'footer.warning':  '⚠ No alcohol for minors · Alcohol during pregnancy harms the fetus',
+      'footer.warning':  'No alcohol for minors · Alcohol during pregnancy harms the fetus',
       'footer.legal':    'Alcohol sold to adults 19+ only · Never drink and drive',
 
       'story.hero.label': 'Brand Story',
@@ -484,7 +494,7 @@ const HS_I18N = (() => {
       'age.no':     '否',
       'age.legal':  '未成年人饮酒违法。<br>酒类产品仅向成年人销售。',
 
-      'hero.badge': '🏆 宿迁正宗出品 · 千三百年酿酒圣地',
+      'hero.badge': '宿迁正宗出品 · 千三百年酿酒圣地',
       'hero.title': '白酒之魂',
       'hero.desc':  '五千年宿迁历史，凝聚于一杯之中',
       'hero.cta1':  '品牌故事',
@@ -532,6 +542,11 @@ const HS_I18N = (() => {
       'origin.s3':     '全球白酒地位',
       'origin.cta':    '了解更多产地故事 →',
 
+      /* SUQIAN ORIGIN SECTION */
+      'suqian.eyebrow': '01 — 酒之源 宿迁',
+      'suqian.title':   '白酒圣地，<br>承载宿迁之魂',
+      'suqian.body':    '正如艾雷岛书写单一麦芽威士忌的传奇，中国“白酒金三角”宿迁，是千年水系与微生物风土孕育的白酒圣地。<br><br><em>“酒之”</em>诞生于这段悠久历史的中心——坚守中国顶级酿造传统的宿迁古城酒厂。<br><br>超越单纯的酒，<em>“酒之”</em>凝聚宿迁肥沃的土壤与匠人的时光，以洋河为代表的地域正统融入现代叙事，呈献最珍贵的“白酒灵魂之旅”。宿迁守护的白酒本质，其深邃回响如今正通过<em>“酒之”</em>流向世界。',
+
       'b2b.label':    'B2B合作',
       'b2b.title':    '高端白酒，<br>为您的场所<br>量身定制',
       'b2b.desc':     '诚邀高尔夫球场、酒店、居酒屋、免税店合作伙伴。<br>提供各渠道定制供应条件与战略合作支持。',
@@ -559,7 +574,7 @@ const HS_I18N = (() => {
       'footer.origin':   '产地故事',
       'footer.partners': '合作伙伴',
       'footer.contact':  '联系我们',
-      'footer.warning':  '⚠ 未成年人禁止饮酒 · 孕期饮酒有害胎儿健康',
+      'footer.warning':  '未成年人禁止饮酒 · 孕期饮酒有害胎儿健康',
       'footer.legal':    '酒类产品仅向19岁以上成年人销售 · 严禁酒后驾车',
 
       'story.hero.label': '品牌故事',

@@ -231,22 +231,22 @@ h1, h2, h3, h4 {
   justify-content: space-between;
 }
 
-.nav-logo { display: flex; align-items: center; gap: 12px; line-height: 1; }
-.nav-logo-img { height: 34px; width: auto; }
-
-/* legacy text-logo (kept as fallback, hidden when img present) */
-.nav-logo-main {
-  font-family: var(--font-en);
-  font-weight: 600;
+.nav-logo { display: flex; align-items: center; gap: 14px; line-height: 1; }
+.nav-logo-zh {
+  font-family: var(--font-zh);
+  font-weight: 500;
   font-size: 1.3rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   color: var(--gold);
 }
-.nav-logo-sub {
-  font-family: var(--font-zh);
-  font-size: 0.78rem;
+.nav-logo-en {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
   color: var(--gray);
-  letter-spacing: 0.18em;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
 }
 
 .nav-menu { display: flex; align-items: center; gap: 38px; }
@@ -776,6 +776,58 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 
+/* ─── Suqian Origin Section ─── */
+.suqian-section {
+  background: var(--ink-2);
+  border-top: 1px solid var(--line-soft);
+  position: relative;
+  overflow: hidden;
+}
+.suqian-deco {
+  position: absolute;
+  right: 3%; top: 9%;
+  font-family: var(--font-zh);
+  font-weight: 500;
+  font-size: clamp(90px, 12vw, 190px);
+  color: rgba(180,144,96,0.05);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 0;
+}
+.suqian-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.suqian-media { position: relative; }
+.suqian-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  filter: saturate(0.96);
+}
+.suqian-cap {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  color: var(--gray-dark);
+}
+.suqian-text .section-title { margin-bottom: 20px; }
+.suqian-body {
+  font-size: 1.02rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.95;
+}
+.suqian-body em { color: var(--gold); font-style: normal; font-weight: 400; }
+
 /* ─── B2B Banner ─── */
 .b2b-banner {
   padding: 110px 0;
@@ -850,7 +902,7 @@ h1, h2, h3, h4 {
   gap: 56px;
   margin-bottom: 60px;
 }
-.footer-brand-logo-img { height: 40px; width: auto; margin-bottom: 16px; }
+.footer-brand-logo-img { height: 64px; width: auto; margin-bottom: 18px; }
 .footer-brand-logo {
   font-family: var(--font-en);
   font-size: 1.45rem;
@@ -1349,6 +1401,8 @@ h1, h2, h3, h4 {
 
   .origin-teaser-deco { display: none; }
   .hero-decoration { display: none; }
+  .suqian-inner { grid-template-columns: 1fr; gap: 32px; }
+  .suqian-deco { display: none; }
   .age-gate-box { padding: 44px 28px; }
   .page-hero { padding: 140px 0 70px; }
 }
