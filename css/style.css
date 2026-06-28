@@ -235,22 +235,22 @@ h1, h2, h3, h4 {
   justify-content: space-between;
 }
 
-.nav-logo { display: flex; align-items: center; gap: 14px; line-height: 1; }
+.nav-logo { display: flex; align-items: center; gap: 16px; line-height: 1; }
 .nav-logo-zh {
   font-family: var(--font-zh);
-  font-weight: 500;
-  font-size: 1.3rem;
-  letter-spacing: 0.12em;
-  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
 }
 .nav-logo-en {
   font-family: var(--font-en);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  color: var(--gray);
-  padding-left: 12px;
-  border-left: 1px solid var(--line);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: #D9CEB6;
+  padding-left: 16px;
+  border-left: 1px solid rgba(180,144,96,0.5);
   white-space: nowrap;
 }
 
