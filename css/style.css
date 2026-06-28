@@ -534,11 +534,12 @@ h1, h2, h3, h4 {
 .hero-headline {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(2.4rem, 4.8vw, 4.1rem);
-  line-height: 1.32;
+  font-size: clamp(1.9rem, 3.5vw, 3.2rem);
+  line-height: 1.4;
   color: #F8F3E9;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   margin-bottom: 34px;
+  white-space: nowrap;
 }
 .hero-headline b,
 .hero-headline strong { font-weight: 700; color: var(--gold-light); }
