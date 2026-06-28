@@ -511,7 +511,7 @@ const HS_I18N = (() => {
       'hero.badge': '宿迁正宗出品 · 千三百年酿酒圣地',
       'hero.title': '白酒之魂',
       'hero.eyebrow': '中國 名酒 · 高端白酒',
-      'hero.title2':  '一滴酒中，<br>凝结<b>千滴</b>汗水',
+      'hero.title2':  '一滴美酒，<br><b>千滴</b>汗水',
       'hero.lead':    '红高粱、清泉水，以及匠人之手。HONSPIRIT 传承中国名酒的酿造之道，将岁月沉淀的深邃凝于一杯。',
       'hero.cta1b':   '查看代表系列',
       'hero.cta2b':   '品牌故事 →',
