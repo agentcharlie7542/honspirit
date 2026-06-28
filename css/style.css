@@ -552,6 +552,7 @@ h1, h2, h3, h4 {
 }
 .hero-lead b, .hero-lead strong { font-weight: 600; color: var(--cream); }
 .hero-col-scroll { display: flex; justify-content: center; }
+.scroll-img { width: min(440px, 96%); height: auto; display: block; }
 
 /* hanging scroll (掛軸) */
 .scroll-art { position: relative; width: min(330px, 80%); }
