@@ -5,7 +5,7 @@
    Palette: warm ink ↔ ivory paper, antique gold, seal red
    ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Ma+Shan+Zheng&display=swap');
 
 /* ─── Design Tokens ─── */
 :root {
@@ -43,6 +43,7 @@
   --font-sans:   'Noto Sans KR', sans-serif;
   --font-en:     'Cormorant Garamond', 'Noto Serif KR', serif;
   --font-zh:     'Noto Serif KR', serif;
+  --font-brush:  'Ma Shan Zheng', 'Noto Serif KR', cursive;
 
   --transition: 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
   --nav-height: 78px;
@@ -496,6 +497,97 @@ h1, h2, h3, h4 {
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.4; transform: scaleY(0.7); transform-origin: top; }
   50%      { opacity: 1;   transform: scaleY(1);   transform-origin: top; }
+}
+
+/* ─── Hero v3 — two-column + hanging scroll (reference layout) ─── */
+.hero-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  align-items: center;
+  gap: 56px;
+  width: 100%;
+}
+.hero-col-text { padding: 70px 0; }
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+.hero-eyebrow-dash { width: 46px; height: 1px; background: var(--gold); opacity: 0.7; flex-shrink: 0; }
+.hero-headline {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2.3rem, 4.6vw, 4rem);
+  line-height: 1.32;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+  margin-bottom: 34px;
+}
+.hero-lead {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.95;
+  max-width: 470px;
+  margin-bottom: 42px;
+}
+.hero-col-scroll { display: flex; justify-content: center; }
+
+/* hanging scroll (掛軸) */
+.scroll-art { position: relative; width: min(330px, 80%); }
+.scroll-cord { display: block; width: 1px; height: 28px; background: var(--gold); opacity: 0.5; margin: 0 auto; }
+.scroll-rod {
+  display: block;
+  height: 16px;
+  width: 110%;
+  margin-left: -5%;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #d2b47e 0%, #a5824f 48%, #795c36 100%);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.45);
+  position: relative;
+  z-index: 2;
+}
+.scroll-rod--bottom { height: 20px; }
+.scroll-paper {
+  position: relative;
+  background: linear-gradient(180deg, #efe7d6, #e5dbc4);
+  padding: 38px 26px 46px;
+  box-shadow: 0 28px 56px rgba(0,0,0,0.5);
+}
+.scroll-paper::before {
+  content: '';
+  position: absolute;
+  inset: 13px;
+  border: 1px solid rgba(120,90,50,0.28);
+  pointer-events: none;
+}
+.scroll-zh {
+  font-family: var(--font-brush);
+  writing-mode: vertical-rl;
+  font-size: clamp(5rem, 12vw, 8.5rem);
+  line-height: 1.05;
+  color: #18140f;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.scroll-seal {
+  position: absolute;
+  right: 24px;
+  bottom: 28px;
+  width: 44px;
+  height: auto;
+  z-index: 3;
 }
 
 /* ─── Philosophy (魂 灵 心) ─── */
@@ -1394,11 +1486,11 @@ h1, h2, h3, h4 {
 
 /* C · Product family gradient cards (bottle-cap colours) */
 .section--amber .product-card--soul,
-.section--cream .product-card--soul   { background: linear-gradient(165deg,#2b3a55,#141d2e); border-color: rgba(255,255,255,0.08); }
+.section--cream .product-card--soul   { background: linear-gradient(165deg,#312c25,#15110b); border-color: rgba(255,255,255,0.08); }
 .section--amber .product-card--spirit,
-.section--cream .product-card--spirit { background: linear-gradient(165deg,#462f54,#1f1430); border-color: rgba(255,255,255,0.08); }
+.section--cream .product-card--spirit { background: linear-gradient(165deg,#a3602f,#3f1f0e); border-color: rgba(255,255,255,0.08); }
 .section--amber .product-card--heart,
-.section--cream .product-card--heart  { background: linear-gradient(165deg,#6e2420,#36120f); border-color: rgba(255,255,255,0.08); }
+.section--cream .product-card--heart  { background: linear-gradient(165deg,#2d6c66,#103230); border-color: rgba(255,255,255,0.08); }
 .section--amber .product-card--grad:hover,
 .section--cream .product-card--grad:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-6px); }
 .product-card--grad .product-zh { color: #F1E8D4; }
@@ -1538,7 +1630,13 @@ h1, h2, h3, h4 {
   .showcase-inner { grid-template-columns: 1fr; }
   .showcase-text { padding: 56px 28px; order: 2; }
   .showcase-media { min-height: 320px; order: 1; }
-  .hero-bignum { top: 56%; font-size: clamp(4rem, 24vw, 9rem); }
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .hero-col-text { padding: 110px 0 0; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-lead { margin-left: auto; margin-right: auto; }
+  .hero-ctas { justify-content: center; }
+  .scroll-art { width: min(260px, 70%); margin-bottom: 20px; }
+  .scroll-zh { min-height: 260px; }
   .age-gate-box { padding: 44px 28px; }
   .page-hero { padding: 140px 0 70px; }
 }
