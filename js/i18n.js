@@ -89,6 +89,8 @@ const HS_I18N = (() => {
       'suqian.eyebrow': '01 — Origin of Spirit 宿迁',
       'suqian.title':   '백주의 성지,<br>쑤첸(宿遷)의 혼을 담다',
       'suqian.body':    '피트 향의 성지 아일레이가 싱글 몰트의 전설을 쓰듯, 중국의 ‘백주 삼각지대’ 쑤첸은 천 년의 물길과 미생물이 빚어낸 백주의 성소입니다.<br><br><em>‘주지(酒之)’</em>는 이 유구한 역사의 중심이자, 중국 굴지의 양조 전통을 지킨 쑤첸의 고도(古都) 공장에서 탄생합니다.<br><br>단순한 술을 넘어 쑤첸의 비옥한 토양과 장인의 시간이 응축된 <em>‘주지’</em>는, 양허(洋河)로 대표되는 지역적 정통성에 현대적 감각의 스토리텔링을 더해 가장 귀한 ‘백주의 영혼적 여정’을 선사합니다. 쑤첸이 간직한 백주의 본질, 그 깊은 울림이 이제 <em>‘주지’</em>를 통해 세계로 흐릅니다.',
+      'showcase.body':  '수백 년 전통 양조 기법과 장기 숙성. 이 한 병에 쑤첸 천 년의 시간이 응축되어, 깊이(魂) 그 자체를 잔에 담아냅니다.',
+      'showcase.cta':   '酒之魂 자세히 보기',
 
       /* B2B BANNER */
       'b2b.label':    'B2B Partnership',
@@ -321,6 +323,8 @@ const HS_I18N = (() => {
       'suqian.eyebrow': '01 — Origin of Spirit 宿迁',
       'suqian.title':   'The Sacred Land of Baijiu,<br>The Soul of Suqian',
       'suqian.body':    'Just as Islay writes the legend of single malt, Suqian — China’s “Baijiu Triangle” — is a sanctuary of baijiu shaped by a thousand years of waterways and microbial terroir.<br><br><em>‘Jiu Zhi (酒之)’</em> is born at the heart of this storied history, in an ancient Suqian distillery that has safeguarded one of China’s foremost brewing traditions.<br><br>More than mere liquor, <em>‘Jiu Zhi’</em> distills Suqian’s fertile soil and the artisan’s time — pairing the regional authenticity epitomized by Yanghe with a modern sense of storytelling to offer the rarest “soulful odyssey of baijiu.” The essence Suqian has long preserved now flows to the world through <em>‘Jiu Zhi.’</em>',
+      'showcase.body':  'Centuries-old brewing mastery and long maturation — a single bottle in which a millennium of Suqian is distilled into depth (魂) itself.',
+      'showcase.cta':   'Discover 酒之魂',
 
       'b2b.label':    'B2B Partnership',
       'b2b.title':    'Premium Baijiu,<br>For Your<br>Establishment',
@@ -546,6 +550,8 @@ const HS_I18N = (() => {
       'suqian.eyebrow': '01 — 酒之源 宿迁',
       'suqian.title':   '白酒圣地，<br>承载宿迁之魂',
       'suqian.body':    '正如艾雷岛书写单一麦芽威士忌的传奇，中国“白酒金三角”宿迁，是千年水系与微生物风土孕育的白酒圣地。<br><br><em>“酒之”</em>诞生于这段悠久历史的中心——坚守中国顶级酿造传统的宿迁古城酒厂。<br><br>超越单纯的酒，<em>“酒之”</em>凝聚宿迁肥沃的土壤与匠人的时光，以洋河为代表的地域正统融入现代叙事，呈献最珍贵的“白酒灵魂之旅”。宿迁守护的白酒本质，其深邃回响如今正通过<em>“酒之”</em>流向世界。',
+      'showcase.body':  '数百年传统酿造工艺与长期陈藏——一瓶之中凝聚宿迁千年时光，将“魂”的深邃注入杯中。',
+      'showcase.cta':   '了解 酒之魂',
 
       'b2b.label':    'B2B合作',
       'b2b.title':    '高端白酒，<br>为您的场所<br>量身定制',
