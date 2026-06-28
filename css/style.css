@@ -245,24 +245,26 @@ h1, h2, h3, h4 {
 }
 .nav-logo-en {
   font-family: var(--font-en);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.2em;
   color: var(--gray);
-  padding-left: 14px;
+  padding-left: 12px;
   border-left: 1px solid var(--line);
+  white-space: nowrap;
 }
 
-.nav-menu { display: flex; align-items: center; gap: 38px; }
+.nav-menu { display: flex; align-items: center; gap: 26px; }
 
 .nav-link {
   font-family: var(--font-sans);
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.06em;
   color: var(--gray);
   transition: color 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
 .nav-link::after {
   content: '';
@@ -277,7 +279,14 @@ h1, h2, h3, h4 {
 .nav-link:hover, .nav-link.active { color: var(--gold); }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 
-.nav-cta { padding: 9px 22px; font-size: 0.8125rem; letter-spacing: 0.08em; }
+.nav-cta { padding: 9px 18px; font-size: 0.78rem; letter-spacing: 0.05em; white-space: nowrap; }
+
+/* tighten nav on mid-width so EN labels never wrap */
+@media (max-width: 1180px) {
+  .nav-menu { gap: 18px; }
+  .nav-link { font-size: 0.78rem; letter-spacing: 0.03em; }
+  .nav-logo-en { display: none; }
+}
 
 .nav-hamburger {
   display: none;
