@@ -21,10 +21,10 @@
   --gold-dark:  #8C6F45;
 
   /* ivory paper (light sections) */
-  --cream:      #EFE7D5;
+  --cream:      #F4EEE0;   /* brighter main text on dark */
   --paper:      #EFE7D5;
   --paper-2:    #F4EEDF;   /* lighter card on paper   */
-  --paper-text: #6B5E45;   /* muted body on paper     */
+  --paper-text: #5E5238;   /* muted body on paper (darker for contrast) */
   --paper-ink:  #2A2216;   /* headings on paper       */
 
   /* accents & neutrals */
@@ -32,8 +32,8 @@
   --seal-soft:  #B5503C;
   --oxblood:    #7A2018;   /* deep heritage red (display) */
   --oxblood-soft: #9B3A2C;
-  --gray:       #A99C82;   /* muted body on dark      */
-  --gray-dark:  #7D7158;   /* faint text on dark      */
+  --gray:       #C9BC9F;   /* body on dark — brightened for readability */
+  --gray-dark:  #9E916F;   /* secondary text on dark    */
   --line:       rgba(180,144,96,0.22);   /* gold hairline   */
   --line-soft:  rgba(180,144,96,0.12);
   --line-dk:    rgba(40,30,16,0.14);      /* hairline on paper */
@@ -58,7 +58,7 @@ body {
   background-color: var(--black);
   color: var(--cream);
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.85;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
@@ -75,7 +75,7 @@ ul { list-style: none; }
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
   line-height: 1.35;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.005em;
 }
 
@@ -114,18 +114,19 @@ h1, h2, h3, h4 {
 }
 
 .section-title {
-  font-size: clamp(1.9rem, 3.4vw, 2.85rem);
-  font-weight: 500;
-  color: var(--cream);
+  font-size: clamp(1.95rem, 3.4vw, 2.9rem);
+  font-weight: 600;
+  color: #F6F1E7;
   margin-bottom: 24px;
 }
+.section-title .accent-en { font-weight: 600; }
 
 .section-desc {
-  font-size: 1.03rem;
-  font-weight: 300;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: var(--gray);
   max-width: 600px;
-  line-height: 1.95;
+  line-height: 1.9;
 }
 
 /* Paper-section text overrides */
@@ -435,7 +436,7 @@ h1, h2, h3, h4 {
 
 .hero-desc {
   font-size: clamp(0.98rem, 1.6vw, 1.12rem);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream);
   opacity: 0.82;
   margin-bottom: 46px;
@@ -461,7 +462,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 10px;
   font-size: 0.8125rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   letter-spacing: 0.04em;
   padding: 0 22px;
@@ -523,21 +524,24 @@ h1, h2, h3, h4 {
 .hero-eyebrow-dash { width: 46px; height: 1px; background: var(--gold); opacity: 0.7; flex-shrink: 0; }
 .hero-headline {
   font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: clamp(2.3rem, 4.6vw, 4rem);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 4.8vw, 4.1rem);
   line-height: 1.32;
-  color: var(--cream);
+  color: #F8F3E9;
   letter-spacing: 0.01em;
   margin-bottom: 34px;
 }
+.hero-headline b,
+.hero-headline strong { font-weight: 700; color: var(--gold-light); }
 .hero-lead {
-  font-size: 1.05rem;
-  font-weight: 300;
+  font-size: 1.08rem;
+  font-weight: 400;
   color: var(--gray);
-  line-height: 1.95;
+  line-height: 1.9;
   max-width: 470px;
   margin-bottom: 42px;
 }
+.hero-lead b, .hero-lead strong { font-weight: 600; color: var(--cream); }
 .hero-col-scroll { display: flex; justify-content: center; }
 
 /* hanging scroll (掛軸) */
@@ -633,7 +637,7 @@ h1, h2, h3, h4 {
 }
 .philosophy-desc {
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   line-height: 1.85;
   margin-bottom: 22px;
@@ -676,7 +680,7 @@ h1, h2, h3, h4 {
 }
 .trust-label {
   font-size: 0.8125rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   line-height: 1.55;
   letter-spacing: 0.02em;
@@ -753,7 +757,7 @@ h1, h2, h3, h4 {
 .product-spec:first-child { border-left: none; }
 .product-copy {
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream);
   opacity: 0.78;
   line-height: 1.85;
@@ -769,7 +773,7 @@ h1, h2, h3, h4 {
 }
 .product-channel {
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   letter-spacing: 0.04em;
   margin-bottom: 28px;
@@ -837,7 +841,7 @@ h1, h2, h3, h4 {
 .origin-teaser-quote em { color: var(--gold); font-style: normal; }
 .origin-teaser-body {
   font-size: 1.03rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   line-height: 1.95;
   margin-bottom: 44px;
@@ -856,7 +860,7 @@ h1, h2, h3, h4 {
   color: var(--gold);
   margin-bottom: 2px;
 }
-.origin-stat span { font-size: 0.84rem; font-weight: 300; color: var(--gray); }
+.origin-stat span { font-size: 0.84rem; font-weight: 400; color: var(--gray); }
 .origin-teaser-deco {
   position: absolute;
   right: 4%; top: 50%;
@@ -916,7 +920,7 @@ h1, h2, h3, h4 {
 .suqian-text .section-title { margin-bottom: 20px; }
 .suqian-body {
   font-size: 1.02rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   line-height: 1.95;
 }
@@ -952,7 +956,7 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--line-soft);
   padding: 18px 18px;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   transition: var(--transition);
 }
@@ -980,7 +984,7 @@ h1, h2, h3, h4 {
 }
 .b2b-feature {
   display: flex; align-items: flex-start; gap: 14px;
-  font-size: 0.9rem; font-weight: 300; color: var(--gray); line-height: 1.6;
+  font-size: 0.9rem; font-weight: 400; color: var(--gray); line-height: 1.6;
 }
 .b2b-feature-check { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
 
@@ -1021,7 +1025,7 @@ h1, h2, h3, h4 {
 }
 .footer-company {
   font-size: 0.84rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray-dark);
   line-height: 1.8;
 }
@@ -1036,7 +1040,7 @@ h1, h2, h3, h4 {
 }
 .footer-links { display: flex; flex-direction: column; gap: 12px; }
 .footer-link {
-  font-size: 0.875rem; font-weight: 300; color: var(--gray);
+  font-size: 0.875rem; font-weight: 400; color: var(--gray);
   transition: color 0.3s ease;
 }
 .footer-link:hover { color: var(--gold); }
@@ -1072,7 +1076,7 @@ h1, h2, h3, h4 {
 }
 .footer-legal {
   font-size: 0.78rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray-dark);
   text-align: right;
   line-height: 1.7;
@@ -1125,14 +1129,14 @@ h1, h2, h3, h4 {
   margin-bottom: 14px;
 }
 .age-gate-desc {
-  font-size: 0.9rem; font-weight: 300;
+  font-size: 0.9rem; font-weight: 400;
   color: var(--gray);
   margin-bottom: 36px; line-height: 1.8;
 }
 .age-gate-btns { display: flex; gap: 14px; justify-content: center; }
 .age-gate-legal {
   margin-top: 30px;
-  font-size: 0.74rem; font-weight: 300;
+  font-size: 0.74rem; font-weight: 400;
   color: var(--gray-dark); line-height: 1.7;
 }
 
@@ -1161,7 +1165,7 @@ h1, h2, h3, h4 {
 }
 .page-hero-desc {
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   max-width: 620px;
   line-height: 1.9;
@@ -1198,7 +1202,7 @@ h1, h2, h3, h4 {
 .story-list { margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
 .story-list-item {
   display: flex; align-items: flex-start; gap: 14px;
-  font-size: 0.9rem; font-weight: 300; color: var(--gray); line-height: 1.7;
+  font-size: 0.9rem; font-weight: 400; color: var(--gray); line-height: 1.7;
 }
 .story-list-item::before {
   content: ''; flex-shrink: 0;
@@ -1237,7 +1241,7 @@ h1, h2, h3, h4 {
   color: var(--gold);
   margin-bottom: 8px;
 }
-.process-step-desc { font-size: 0.8rem; font-weight: 300; color: var(--gray); line-height: 1.6; }
+.process-step-desc { font-size: 0.8rem; font-weight: 400; color: var(--gray); line-height: 1.6; }
 
 /* ─── Origin Page — timeline ─── */
 .timeline { position: relative; padding-left: 36px; margin-top: 44px; }
@@ -1271,7 +1275,7 @@ h1, h2, h3, h4 {
   color: var(--cream);
   margin-bottom: 6px;
 }
-.timeline-desc { font-size: 0.875rem; font-weight: 300; color: var(--gray); line-height: 1.7; }
+.timeline-desc { font-size: 0.875rem; font-weight: 400; color: var(--gray); line-height: 1.7; }
 
 .nature-grid {
   display: grid;
@@ -1301,7 +1305,7 @@ h1, h2, h3, h4 {
   color: var(--gold);
   margin-bottom: 12px;
 }
-.nature-desc { font-size: 0.9rem; font-weight: 300; color: var(--gray); line-height: 1.85; }
+.nature-desc { font-size: 0.9rem; font-weight: 400; color: var(--gray); line-height: 1.85; }
 
 .stats-infographic {
   display: grid;
@@ -1325,7 +1329,7 @@ h1, h2, h3, h4 {
   color: var(--gold);
   margin-bottom: 10px;
 }
-.stat-box-label { font-size: 0.84rem; font-weight: 300; color: var(--gray); line-height: 1.55; }
+.stat-box-label { font-size: 0.84rem; font-weight: 400; color: var(--gray); line-height: 1.55; }
 
 /* ─── Products Page detail ─── */
 .product-detail { padding: 90px 0; border-bottom: 1px solid var(--line-soft); }
@@ -1359,7 +1363,7 @@ h1, h2, h3, h4 {
 .channel-table td {
   padding: 18px 20px;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   border-bottom: 1px solid var(--line-soft);
   vertical-align: middle;
@@ -1378,7 +1382,7 @@ h1, h2, h3, h4 {
   color: var(--cream);
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   padding: 15px 16px;
   border-radius: 0;
   outline: none;
@@ -1398,7 +1402,7 @@ h1, h2, h3, h4 {
 .aroma-notes { display: flex; flex-wrap: wrap; gap: 10px; }
 .aroma-note {
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   border: 1px solid var(--line-soft);
   padding: 6px 15px;
@@ -1410,7 +1414,7 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 14px;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
 }
 .pairing-icon {
@@ -1429,7 +1433,7 @@ h1, h2, h3, h4 {
   padding: 16px 18px;
   text-align: center;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   border-bottom: 1px solid var(--line-soft);
 }
 .compare-table th {
@@ -1541,7 +1545,7 @@ h1, h2, h3, h4 {
 }
 .showcase-body {
   font-size: 1.0rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--gray);
   line-height: 1.95;
   margin-bottom: 16px;
