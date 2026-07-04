@@ -85,8 +85,17 @@ function initScrollAnimations() {
     .forEach(el => observer.observe(el));
 }
 
-/* ─── Counter Animation ─── */
-function animateCounter(el, target, suffix, duration = 2000) {
+/* ─── Counter Animation (language-aware suffix) ─── */
+// Suffix per language: data-suffix (ko) / data-suffix-en / data-suffix-zh.
+// Falls back to the ko suffix when a language-specific one is absent.
+function counterSuffix(el) {
+  const l = document.documentElement.lang || 'ko';
+  if (l === 'en') return el.dataset.suffixEn ?? el.dataset.suffix ?? '';
+  if (l === 'zh') return el.dataset.suffixZh ?? el.dataset.suffix ?? '';
+  return el.dataset.suffix ?? '';
+}
+
+function animateCounter(el, target, duration = 2000) {
   const start = performance.now();
   const isDecimal = target % 1 !== 0;
 
@@ -96,11 +105,23 @@ function animateCounter(el, target, suffix, duration = 2000) {
     const current = isDecimal
       ? (eased * target).toFixed(1)
       : Math.floor(eased * target);
-    el.textContent = current.toLocaleString() + suffix;
+    el.textContent = current.toLocaleString() + counterSuffix(el);
     if (elapsed < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
 }
+
+// Re-render finished counters with the current language's suffix (on lang switch).
+function refreshCounters() {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    if (!el._hsStarted) return;
+    const target = parseFloat(el.dataset.count);
+    const num = target % 1 !== 0 ? Number(target.toFixed(1)) : Math.floor(target);
+    el.textContent = num.toLocaleString() + counterSuffix(el);
+  });
+}
+// Hook invoked by i18n after every language apply().
+window.HS_onLangChange = refreshCounters;
 
 function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
@@ -110,9 +131,8 @@ function initCounters() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
-        const target = parseFloat(el.dataset.count);
-        const suffix = el.dataset.suffix || '';
-        animateCounter(el, target, suffix);
+        el._hsStarted = true;
+        animateCounter(el, parseFloat(el.dataset.count));
         observer.unobserve(el);
       }
     });
