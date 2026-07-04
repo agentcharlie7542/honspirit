@@ -1108,7 +1108,7 @@ const HS_I18N = (() => {
       'footer.legal':    '酒类产品仅向19岁以上成年人销售 · 严禁酒后驾车',
 
       'story.hero.label': '品牌故事',
-      'story.hero.title': '敬不甘的灵魂，<br><span class="gold">喝有故事的酒</span>',
+      'story.hero.title': '敬不甘的灵魂，<span class="gold">喝有故事的酒</span>',
       'story.hero.desc':  'HONSPIRIT不仅仅是一款白酒。它诞生于中国千年白酒传统与现代韩国感性的交汇之处。',
       'story.p1.label':   '第一章',
       'story.p1.title':   'HONSPIRIT<br>的诞生',
