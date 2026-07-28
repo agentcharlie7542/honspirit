@@ -1231,9 +1231,9 @@ const HS_I18N = (() => {
       'contact.b2b.btn':    'B2B合作咨询 →',
 
       /* 价格（人民币） */
-      'price.soul':   '¥668',
-      'price.spirit': '¥378',
-      'price.heart':  '¥218',
+      'price.soul':   '¥899',
+      'price.spirit': '¥499',
+      'price.heart':  '¥188',
 
       /* 产地导语统计数字 */
       'origin.s1v':   '5,000年',
