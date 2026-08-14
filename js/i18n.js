@@ -261,7 +261,7 @@ const HS_I18N = (() => {
 
       /* PRICES (언어별 통화) */
       'price.soul':   '₩498,000',
-      'price.spirit': '₩168,000',
+      'price.spirit': '₩198,000',
       'price.heart':  '₩68,000',
 
       /* ORIGIN 티저 통계 수치 */
