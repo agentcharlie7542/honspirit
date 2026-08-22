@@ -1774,10 +1774,13 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 20px;
   align-items: flex-start;
+  justify-content: center;
 }
+/* 사진이 적어 열이 줄어도 카드가 화면 폭만큼 늘어나지 않도록 상한을 둔다 */
 .moment-col {
   flex: 1 1 0;
   min-width: 0;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -2164,14 +2167,14 @@ h1, h2, h3, h4 {
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
   .moments-bar-inner { padding: 0 22px; }
-  .moments-teaser-grid { grid-template-columns: repeat(2, 1fr); }
+  .moments-teaser-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }
 @media (max-width: 768px) {
   .moments-bar { padding: 11px 0; }
   .moments-bar-inner { gap: 10px; }
   .moments-count { display: none; }
   .moments-wall { gap: 12px; }
-  .moment-col { gap: 12px; }
+  .moment-col { gap: 12px; max-width: none; }
   .moment-media::after { inset: 7px; }
   .moment-body { padding: 12px 13px 14px; }
   .moment-caption { font-size: 0.84rem; margin-bottom: 9px; }

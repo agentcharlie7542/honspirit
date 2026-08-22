@@ -31,11 +31,11 @@ const HS_MOMENTS = (() => {
   /* ─────────────────────────────────────────
      메이슨리 월
      ───────────────────────────────────────── */
+  // 사진이 적을 때 빈 열이 남지 않도록 장수에 맞춰 열을 줄인다
   function colsFor() {
     const w = window.innerWidth;
-    if (w <= 768) return 2;
-    if (w <= 1024) return 3;
-    return 4;
+    const max = w <= 768 ? 2 : w <= 1024 ? 3 : 4;
+    return Math.max(1, Math.min(max, S.view.length || max));
   }
 
   function buildCols(wall) {
@@ -75,7 +75,6 @@ const HS_MOMENTS = (() => {
 
     card.innerHTML = `
       <div class="moment-media" style="aspect-ratio:${item.w} / ${item.h}">
-        <span class="moment-badge"><span class="moment-badge-zh">酒之魂</span></span>
         <img src="${esc(srcOf(item))}" alt="${esc(cap || 'HONSPIRIT moment')}" loading="lazy" decoding="async">
       </div>
       <div class="moment-body">
@@ -182,8 +181,18 @@ const HS_MOMENTS = (() => {
   function paintTeaser() {
     const box = el('momentsTeaser');
     if (!box) return;
+
+    const section = box.closest('section');
+    if (!S.items.length) {                    // 올린 사진이 없으면 섹션 자체를 숨긴다
+      if (section) section.hidden = true;
+      return;
+    }
+    if (section) section.hidden = false;
+
+    const shown = S.items.slice(0, 4);
+    box.style.gridTemplateColumns = `repeat(${shown.length}, minmax(0, 1fr))`;
     box.innerHTML = '';
-    S.items.slice(0, 4).forEach(item => {
+    shown.forEach(item => {
       const card = cardEl(item, 'moments.html');
       // 티저는 4:5 로 통일해 한 줄이 가지런히 떨어지게 한다
       card.querySelector('.moment-media').style.aspectRatio = '4 / 5';

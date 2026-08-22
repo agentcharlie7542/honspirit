@@ -58,7 +58,6 @@ const HS_M = (() => {
 
   // 캡션은 언어별로 저장하고, 없으면 한국어로 폴백한다
   function capOf(item) {
-    if (item.capML) return item.capML[lang()] || item.capML.ko || '';
     const l = lang();
     if (l === 'en') return item.caption_en || item.caption || '';
     if (l === 'zh') return item.caption_zh || item.caption || '';
@@ -110,56 +109,6 @@ const HS_M = (() => {
   };
 
   const CROPS = { auto: null, '4:5': 1.25, '1:1': 1, '3:2': 2 / 3 };
-
-  /* ─────────────────────────────────────────
-     브랜드 큐레이션 시드 — DB 가 비어 있어도 벽이 비지 않도록
-     ───────────────────────────────────────── */
-  const SEEDS = [
-    { id: 's01', src: 'images/hon_vertical.jpeg', w: 1200, h: 1500, tag: 'soul',   at: '2026-05-02T20:10:00+09:00',
-      cap: { ko: '따르는 소리마저 느리게 흐르던 밤. 酒之魂은 서두르지 않는 술입니다.',
-             en: 'A night where even the pour ran slow. 酒之魂 is not a spirit to be hurried.',
-             zh: '连倒酒声都变慢的夜晚。酒之魂，是不该被催促的酒。' } },
-    { id: 's02', src: 'images/suqian.jpg',        w: 1024, h: 759,  tag: '',        at: '2026-04-27T06:40:00+09:00',
-      cap: { ko: '쑤첸의 새벽 물안개. 이 물이 한 잔의 시작이 됩니다.',
-             en: 'Dawn mist over Suqian. This water is where the glass begins.',
-             zh: '宿迁清晨的水雾。一杯酒，自此开始。' } },
-    { id: 's03', src: 'images/ling_vertical.jpeg', w: 1200, h: 1500, tag: 'spirit', at: '2026-04-19T21:55:00+09:00',
-      cap: { ko: '오늘의 테이블에 놓인 灵. 가벼운 대화가 오래 남는 밤이었습니다.',
-             en: '灵 on tonight’s table. Light talk that stayed long after.',
-             zh: '今晚桌上的灵。轻声的谈话，久久不散。' } },
-    { id: 's04', src: 'images/total.jpeg',        w: 1920, h: 1080, tag: '',        at: '2026-04-11T18:30:00+09:00',
-      cap: { ko: '魂 · 灵 · 心 — 세 개의 온도가 한 자리에 모였습니다.',
-             en: '魂 · 灵 · 心 — three temperatures gathered at one table.',
-             zh: '魂 · 灵 · 心 —— 三种温度，聚于一席。' } },
-    { id: 's05', src: 'images/xin_vertical.jpeg', w: 1200, h: 1500, tag: 'heart',  at: '2026-03-28T19:05:00+09:00',
-      cap: { ko: '가장 자주 여는 병이 가장 오래 남습니다. 心, 평일 저녁의 술.',
-             en: 'The bottle opened most often lingers longest. 心, a weeknight spirit.',
-             zh: '开得最勤的那瓶，留得最久。心，平常夜晚的酒。' } },
-    { id: 's06', src: 'images/hon.jpeg',          w: 1920, h: 1080, tag: 'soul',    at: '2026-03-15T22:20:00+09:00',
-      cap: { ko: '잔을 내려놓고도 향이 남았습니다.',
-             en: 'The glass was down, and the aroma stayed.',
-             zh: '杯已放下，香气仍在。' } },
-    { id: 's07', src: 'images/scroll-jiuzhi.png', w: 1520, h: 1960, tag: '',        at: '2026-03-02T11:00:00+09:00',
-      cap: { ko: '酒之 — 술의, 그리고 사람의.',
-             en: '酒之 — of the spirit, and of the people.',
-             zh: '酒之 —— 酒的，也是人的。' } },
-    { id: 's08', src: 'images/ling.jpeg',         w: 1920, h: 1080, tag: 'spirit',  at: '2026-02-21T20:40:00+09:00',
-      cap: { ko: '灵 42% vol. 두 번째 잔부터 진짜 이야기가 시작됩니다.',
-             en: '灵 42% vol. The real conversation starts at the second glass.',
-             zh: '灵 42% vol。真正的话，从第二杯开始。' } },
-    { id: 's09', src: 'images/jiuzhi.png',        w: 1920, h: 1047, tag: '',        at: '2026-02-08T15:10:00+09:00',
-      cap: { ko: '안주하지 않는 영혼에 경의를.',
-             en: 'To the souls that never settle.',
-             zh: '敬不甘的灵魂。' } },
-    { id: 's10', src: 'images/xin.jpeg',          w: 1920, h: 1080, tag: 'heart',   at: '2026-01-24T19:45:00+09:00',
-      cap: { ko: '心 38% vol. 나누기 위해 만든 도수입니다.',
-             en: '心 38% vol. A strength made for sharing.',
-             zh: '心 38% vol。为分享而生的度数。' } },
-  ].map(s => ({
-    id: s.id, kind: 'seed', src: s.src, w: s.w, h: s.h, tag: s.tag,
-    official: true, status: 'approved',
-    author: 'HONSPIRIT', capML: s.cap, createdAt: s.at,
-  }));
 
   /* ─────────────────────────────────────────
      로컬 미리보기 저장소 (Supabase 미설정 시에만 사용)
@@ -509,7 +458,7 @@ const HS_M = (() => {
   const toBlob = (canvas, q) => new Promise(res => canvas.toBlob(res, 'image/jpeg', q));
 
   /* ─────────────────────────────────────────
-     피드 로딩 — DB(또는 로컬 미리보기) + 브랜드 시드
+     피드 로딩 — 스튜디오에서 올린 사진만 (하드코딩 사진 없음)
      ───────────────────────────────────────── */
   async function loadFeed() {
     let rows = [];
@@ -525,13 +474,12 @@ const HS_M = (() => {
         .map(r => Object.assign({}, r, { kind: 'local', official: true }));
     }
 
-    const items = rows.concat(SEEDS)
-      .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
-    return { items, error };
+    rows.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+    return { items: rows, error };
   }
 
   return {
-    CFG, PREVIEW_EDGE, TONES, CROPS, SEEDS,
+    CFG, PREVIEW_EDGE, TONES, CROPS,
     el, esc, clamp, lang, fmtDate, fmtDateShort, capOf, srcOf, dropURL,
     Local, SB, decode, render, toBlob, loadFeed,
   };
