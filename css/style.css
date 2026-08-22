@@ -2434,3 +2434,65 @@ h1, h2, h3, h4 {
   .studio-row-acts { grid-column: 1 / -1; justify-content: flex-end; }
   .studio-gate-box { padding: 38px 24px 28px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ — 자주 묻는 질문 (faq.html)
+   ═══════════════════════════════════════════════════════════ */
+.faq-wrap { max-width: 860px; }
+
+.faq-item {
+  border-bottom: 1px solid var(--line-soft);
+}
+.faq-item:first-child { border-top: 1px solid var(--line-soft); }
+
+.faq-q {
+  position: relative;
+  display: block;
+  padding: 28px 52px 28px 0;
+  font-family: var(--font-head-ko);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--cream);
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q:hover { color: var(--gold); }
+
+.faq-q::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 11px; height: 11px;
+  margin-top: -8px;
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  transform: rotate(45deg);
+  transition: transform 0.35s cubic-bezier(0.22,0.61,0.36,1);
+}
+.faq-item[open] .faq-q { color: var(--gold); }
+.faq-item[open] .faq-q::after { transform: rotate(-135deg); margin-top: -3px; }
+
+.faq-a {
+  padding: 0 40px 30px 0;
+  animation: faqOpen 0.45s cubic-bezier(0.22,0.61,0.36,1);
+}
+@keyframes faqOpen { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+.faq-a p {
+  font-size: 0.9375rem;
+  line-height: 1.95;
+  color: var(--gray);
+}
+.faq-a strong { color: var(--cream); font-weight: 700; }
+.faq-a em { color: var(--gold); font-style: normal; }
+.faq-a .text-link { display: inline; font-size: inherit; letter-spacing: 0; }
+
+@media (max-width: 768px) {
+  .faq-q { padding: 22px 40px 22px 0; font-size: 0.9875rem; }
+  .faq-a { padding: 0 8px 24px 0; }
+  .faq-a p { font-size: 0.9rem; line-height: 1.9; }
+}

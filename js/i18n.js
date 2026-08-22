@@ -24,6 +24,7 @@ const HS_I18N = (() => {
       'nav.contact':  '문의',
       'nav.cta':      '파트너십 문의',
       'nav.moments':  '추억 갤러리',
+      'nav.faq':      'FAQ',
 
       /* MOMENTS — 魂의 순간 (고객 추억 갤러리) */
       'moments.meta.title':   '魂의 순간 — HONSPIRIT 혼스피릿 추억 갤러리',
@@ -541,6 +542,7 @@ const HS_I18N = (() => {
       'nav.contact':  'Contact',
       'nav.cta':      'Partner Inquiry',
       'nav.moments':  'Moments',
+      'nav.faq':      'FAQ',
 
       /* MOMENTS — guest memory gallery */
       'moments.meta.title':   'Moments — HONSPIRIT Guest Gallery',
@@ -1045,6 +1047,7 @@ const HS_I18N = (() => {
       'nav.contact':  '联系我们',
       'nav.cta':      '合作咨询',
       'nav.moments':  '回忆画廊',
+      'nav.faq':      '常见问题',
 
       /* MOMENTS — 客人回忆画廊 */
       'moments.meta.title':   '魂的瞬间 — HONSPIRIT 回忆画廊',
@@ -1595,6 +1598,13 @@ const HS_I18N = (() => {
     apply();
   }
 
+  /* ─── 검색·AI 크롤러 판별 ───
+     이 사이트는 한 URL에서 JS로 언어를 바꾼다. 자동 전환을 그대로 두면
+     해외 IP로 접근하는 구글봇·AI 크롤러가 영문 화면을 색인해 버린다.
+     크롤러에게는 이 URL의 정본(canonical)인 한국어를 그대로 보여준다. */
+  const CRAWLER = /bot|crawler|spider|crawling|slurp|yeti|daum|naver|bingpreview|facebookexternalhit|kakaotalk|embedly|quora link preview|pinterest|slackbot|twitterbot|whatsapp|telegrambot|discordbot|gptbot|oai-searchbot|chatgpt-user|claudebot|claude-searchbot|claude-user|perplexitybot|perplexity-user|google-extended|applebot|ccbot|bytespider/i
+    .test(navigator.userAgent || '');
+
   /* ─── IP 기반 자동 감지 ─── */
   function fromBrowser() {
     const l = (navigator.language || 'ko').toLowerCase();
@@ -1618,6 +1628,14 @@ const HS_I18N = (() => {
 
   /* ─── 초기화 ─── */
   async function init() {
+    // 0. 크롤러는 한국어 고정 (색인 언어 고정)
+    if (CRAWLER) {
+      lang = 'ko';
+      apply();
+      initSwitchers();
+      return;
+    }
+
     // 1. 저장된 언어 우선
     const stored = localStorage.getItem('hs_lang');
     if (stored && T[stored]) {

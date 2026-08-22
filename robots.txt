@@ -1,3 +1,74 @@
+# HONSPIRIT — https://honspirit.com
+# 정책: 검색·인용 목적의 크롤러는 허용, 모델 학습 목적의 크롤러는 차단
+
+# ── 일반 검색엔진 (구글 · 네이버 Yeti · 다음 · 빙) ──
 User-agent: *
-Disallow: /studio.html
 Allow: /
+Disallow: /studio.html
+
+# ── AI 검색 크롤러: 허용 (답변에 출처로 인용됨) ──
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /studio.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /studio.html
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /studio.html
+
+User-agent: Claude-User
+Allow: /
+Disallow: /studio.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /studio.html
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /studio.html
+
+# ── AI 학습 크롤러: 차단 (모델 가중치에 흡수되고 출처 표기 없음) ──
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+Sitemap: https://honspirit.com/sitemap.xml
