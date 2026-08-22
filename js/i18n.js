@@ -23,6 +23,23 @@ const HS_I18N = (() => {
       'nav.partners': 'B2B 파트너십',
       'nav.contact':  '문의',
       'nav.cta':      '파트너십 문의',
+      'nav.moments':  '추억 갤러리',
+
+      /* MOMENTS — 魂의 순간 (고객 추억 갤러리) */
+      'moments.meta.title':   '魂의 순간 — HONSPIRIT 혼스피릿 추억 갤러리',
+      'moments.hero.label':   'Moments',
+      'moments.hero.title':   '魂의 순간,<br><span class="gold">혼스피릿이 머문 자리</span>',
+      'moments.hero.desc':    '혼스피릿이 놓였던 테이블, 잔을 부딪히던 밤. 브랜드가 함께한 순간들을 한 장씩 걸어둡니다.',
+      'moments.f.all':        '전체',
+      'moments.f.soul':       '酒之魂',
+      'moments.f.spirit':     '酒之灵',
+      'moments.f.heart':      '酒之心',
+      'moments.empty':        '아직 이 조건에 맞는 순간이 없습니다.<br>곧 새로운 한 장이 걸립니다.',
+      'home.moments.label':   'Moments',
+      'home.moments.title':   '혼스피릿과 함께한 밤,<br>그 한 장을 걸어두는 벽',
+      'home.moments.desc':    '테이블 위의 한 병, 잔을 부딪히던 밤. 혼스피릿이 함께한 순간들을 모았습니다.',
+      'home.moments.cta':     '추억 갤러리 보기 →',
+      'footer.moments':       '추억 갤러리',
       'nav.sub':      '혼스피릿 · 酒之魂',
 
       /* AGE GATE */
@@ -523,6 +540,23 @@ const HS_I18N = (() => {
       'nav.partners': 'B2B Partnership',
       'nav.contact':  'Contact',
       'nav.cta':      'Partner Inquiry',
+      'nav.moments':  'Moments',
+
+      /* MOMENTS — guest memory gallery */
+      'moments.meta.title':   'Moments — HONSPIRIT Guest Gallery',
+      'moments.hero.label':   'Moments',
+      'moments.hero.title':   'Moments of 魂,<br><span class="gold">where the house lingered</span>',
+      'moments.hero.desc':    'The table it stood on, the night the glasses met. Moments the house was part of, hung here one frame at a time.',
+      'moments.f.all':        'All',
+      'moments.f.soul':       'Soul',
+      'moments.f.spirit':     'Spirit',
+      'moments.f.heart':      'Heart',
+      'moments.empty':        'No moments match this filter yet.<br>A new frame will be hung soon.',
+      'home.moments.label':   'Moments',
+      'home.moments.title':   'The nights spent with HONSPIRIT,<br>a wall for those frames',
+      'home.moments.desc':    'A bottle on the table, a night of raised glasses. The moments HONSPIRIT was part of.',
+      'home.moments.cta':     'Open the gallery →',
+      'footer.moments':       'Moments',
       'nav.sub':      'Hornspirit · 酒之魂',
 
       'age.title':  'Are you 19 or older?',
@@ -1010,6 +1044,23 @@ const HS_I18N = (() => {
       'nav.partners': 'B2B合作',
       'nav.contact':  '联系我们',
       'nav.cta':      '合作咨询',
+      'nav.moments':  '回忆画廊',
+
+      /* MOMENTS — 客人回忆画廊 */
+      'moments.meta.title':   '魂的瞬间 — HONSPIRIT 回忆画廊',
+      'moments.hero.label':   'Moments',
+      'moments.hero.title':   '魂的瞬间，<br><span class="gold">酒之魂停留过的地方</span>',
+      'moments.hero.desc':    '酒瓶所在的桌，碰杯的那个夜。品牌参与过的瞬间，一张一张挂在这面墙上。',
+      'moments.f.all':        '全部',
+      'moments.f.soul':       '酒之魂',
+      'moments.f.spirit':     '酒之灵',
+      'moments.f.heart':      '酒之心',
+      'moments.empty':        '暂无符合条件的瞬间。<br>新的一张即将挂上。',
+      'home.moments.label':   'Moments',
+      'home.moments.title':   '与 HONSPIRIT 共度的夜，<br>为那些画面留一面墙',
+      'home.moments.desc':    '桌上的一瓶酒，举杯的那个夜。HONSPIRIT 共度过的瞬间。',
+      'home.moments.cta':     '进入回忆画廊 →',
+      'footer.moments':       '回忆画廊',
       'nav.sub':      '魂斯皮利特 · 酒之魂',
 
       'age.title':  '您是否已满19周岁？',
@@ -1492,26 +1543,35 @@ const HS_I18N = (() => {
   let lang = 'ko';
 
   /* ─── 번역 적용 ─── */
-  function apply() {
+  // root 를 주면 그 하위(및 자신)만 번역한다 — 동적으로 만든 노드에 사용.
+  function applyTo(root) {
     const cur = T[lang] || T.ko;
+    const scope = root || document;
+
+    const each = (sel, fn) => {
+      if (root && root.nodeType === 1 && root.matches(sel)) fn(root);
+      scope.querySelectorAll(sel).forEach(fn);
+    };
 
     // textContent
-    document.querySelectorAll('[data-i18n]').forEach(el => {
+    each('[data-i18n]', el => {
       const v = cur[el.dataset.i18n] ?? T.ko[el.dataset.i18n];
       if (v !== undefined) el.textContent = v;
     });
 
     // innerHTML (줄바꿈·태그 포함)
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    each('[data-i18n-html]', el => {
       const v = cur[el.dataset.i18nHtml] ?? T.ko[el.dataset.i18nHtml];
       if (v !== undefined) el.innerHTML = v;
     });
 
     // placeholder
-    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    each('[data-i18n-ph]', el => {
       const v = cur[el.dataset.i18nPh] ?? T.ko[el.dataset.i18nPh];
       if (v !== undefined) el.placeholder = v;
     });
+
+    if (root) return;
 
     // html[lang]
     document.documentElement.lang = lang;
@@ -1524,6 +1584,9 @@ const HS_I18N = (() => {
     // 언어 전환 후크 (예: 카운터 접미사 갱신)
     if (typeof window.HS_onLangChange === 'function') window.HS_onLangChange(lang);
   }
+
+  const apply     = () => applyTo(null);
+  const translate = root => applyTo(root || document);
 
   function setLang(l) {
     if (!T[l]) return;
@@ -1584,8 +1647,10 @@ const HS_I18N = (() => {
     });
   }
 
-  return { init, setLang };
+  return { init, setLang, translate };
 
 })();
+
+window.HS_I18N = HS_I18N;
 
 document.addEventListener('DOMContentLoaded', HS_I18N.init);

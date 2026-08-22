@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <title>MOMENTS STUDIO — HONSPIRIT 관계자 전용</title>
+  <meta name="theme-color" content="#0C0C0D">
+  <link rel="stylesheet" href="css/style.css?v=20260822a">
+</head>
+<body class="studio-body">
+
+  <!-- ═══ 로그인 게이트 ═══ -->
+  <div class="studio-gate" id="studioGate">
+    <div class="studio-gate-box" id="studioGateBox">
+      <div class="age-gate-zh">酒之魂</div>
+      <div class="age-gate-brand">MOMENTS STUDIO</div>
+      <div class="gold-divider gold-divider--center"></div>
+      <p class="studio-gate-desc">
+        혼스피릿 관계자 전용 페이지입니다.<br>
+        발급받은 계정으로 로그인해 주세요.
+      </p>
+      <form id="gateForm" autocomplete="on">
+        <div class="form-group">
+          <label class="form-label" for="gateEmail">이메일</label>
+          <input class="form-input" type="email" id="gateEmail" autocomplete="username" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="gatePassword">비밀번호</label>
+          <input class="form-input" type="password" id="gatePassword" autocomplete="current-password" required>
+        </div>
+        <button class="btn btn-primary" type="submit" id="gateSubmit" style="width:100%; justify-content:center;">로그인</button>
+      </form>
+      <p class="studio-gate-legal">
+        이 페이지 주소와 계정을 외부에 공유하지 마세요.<br>
+        올린 사진은 혼스피릿 홈페이지 갤러리에 공개됩니다.
+      </p>
+    </div>
+
+    <!-- Supabase 미설정 안내 -->
+    <div class="studio-gate-box" id="studioSetup" hidden>
+      <div class="age-gate-zh">酒之魂</div>
+      <div class="age-gate-brand">SETUP REQUIRED</div>
+      <div class="gold-divider gold-divider--center"></div>
+      <p class="studio-gate-desc">
+        아직 Supabase가 연결되지 않았습니다.<br>
+        지금은 <b>이 기기에만 저장되는 미리보기 모드</b>로 동작합니다.
+      </p>
+      <p class="studio-gate-legal">
+        <code>js/moments-config.js</code> 의 supabase 항목을 채우면<br>
+        모든 방문자가 보는 공개 갤러리로 전환됩니다.<br>
+        설정 방법은 <code>SUPABASE_SETUP.md</code> 를 참고하세요.
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══ 스튜디오 ═══ -->
+  <div id="studioApp" hidden>
+
+    <header class="studio-head">
+      <div class="studio-head-inner">
+        <a href="moments.html" class="studio-brand">
+          <span class="studio-brand-zh">酒之魂</span>
+          <span class="studio-brand-en">MOMENTS STUDIO</span>
+        </a>
+        <div class="studio-head-right">
+          <span class="studio-who" id="studioWho"></span>
+          <a href="moments.html" class="chip" target="_blank" rel="noopener">갤러리 열기 ↗</a>
+          <button class="chip" type="button" id="studioSignOut">로그아웃</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="studio-main">
+
+      <!-- ── 업로드 ── -->
+      <section class="studio-panel">
+        <p class="section-label">Upload</p>
+        <h1 class="studio-title">순간을 올리다</h1>
+        <p class="studio-hint">
+          사진은 긴 변 1,440px로 리사이즈되고 브랜드 톤으로 보정된 뒤 갤러리에 게시됩니다.
+        </p>
+
+        <div id="studioStage1">
+          <div class="sheet-drop" id="studioDrop">
+            <span class="sheet-drop-zh">魂</span>
+            <span class="sheet-drop-main">사진 선택하기</span>
+            <span class="sheet-drop-hint">
+              휴대폰 앨범에서 고르거나 카메라로 바로 촬영할 수 있습니다.<br>
+              JPG · PNG · HEIC · 한 번에 최대 6장
+            </span>
+          </div>
+          <input type="file" id="studioFile" accept="image/*" multiple hidden>
+        </div>
+
+        <form id="studioForm" hidden>
+          <div class="sheet-sticky">
+            <div class="sheet-preview-wrap" id="studioPreview">
+              <div class="sheet-preview-busy">Rendering</div>
+            </div>
+            <div class="studio-thumbs-row">
+              <div class="sheet-thumbs" id="studioThumbs"></div>
+              <span class="studio-pick-count" id="studioPickCount"></span>
+            </div>
+          </div>
+
+          <div class="sheet-field">
+            <span class="sheet-label">Tone</span>
+            <div class="sheet-chips" id="toneChips">
+              <button class="chip active" type="button" data-tone="champagne">샴페인</button>
+              <button class="chip" type="button" data-tone="noir">느와르</button>
+              <button class="chip" type="button" data-tone="ember">앰버</button>
+              <button class="chip" type="button" data-tone="ink">수묵</button>
+              <button class="chip" type="button" data-tone="original">원본</button>
+            </div>
+          </div>
+
+          <div class="sheet-field">
+            <span class="sheet-label">Frame</span>
+            <div class="sheet-chips" id="cropChips">
+              <button class="chip active" type="button" data-crop="auto">원본 비율</button>
+              <button class="chip" type="button" data-crop="4:5">세로 4:5</button>
+              <button class="chip" type="button" data-crop="1:1">정방 1:1</button>
+              <button class="chip" type="button" data-crop="3:2">가로 3:2</button>
+            </div>
+          </div>
+
+          <div class="sheet-field">
+            <label class="sheet-toggle">
+              <input type="checkbox" id="studioMark" checked>
+              <span>酒之魂 골드 프레임과 로고를 새깁니다</span>
+            </label>
+          </div>
+
+          <div class="sheet-field">
+            <label class="sheet-label" for="studioCaption">캡션 · 한국어</label>
+            <textarea class="form-textarea" id="studioCaption" rows="2" maxlength="220"
+              style="min-height:74px" placeholder="그날을 한 줄로 (선택)"></textarea>
+          </div>
+
+          <details class="studio-details">
+            <summary>영문 · 중문 캡션 추가</summary>
+            <div class="sheet-field">
+              <label class="sheet-label" for="studioCaptionEn">Caption · English</label>
+              <textarea class="form-textarea" id="studioCaptionEn" rows="2" maxlength="220"
+                style="min-height:74px" placeholder="비워두면 한국어 캡션이 그대로 보입니다"></textarea>
+            </div>
+            <div class="sheet-field">
+              <label class="sheet-label" for="studioCaptionZh">字幕 · 中文</label>
+              <textarea class="form-textarea" id="studioCaptionZh" rows="2" maxlength="220"
+                style="min-height:74px" placeholder="비워두면 한국어 캡션이 그대로 보입니다"></textarea>
+            </div>
+          </details>
+
+          <div class="form-grid" style="margin-top:20px;">
+            <div class="form-group">
+              <label class="form-label" for="studioAuthor">표기 이름</label>
+              <input class="form-input" type="text" id="studioAuthor" maxlength="40" placeholder="HONSPIRIT">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="studioTag">함께한 제품</label>
+              <select class="form-select" id="studioTag">
+                <option value="">선택 안 함</option>
+                <option value="soul">酒之魂 · Soul</option>
+                <option value="spirit">酒之灵 · Spirit</option>
+                <option value="heart">酒之心 · Heart</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="sheet-field">
+            <label class="sheet-toggle">
+              <input type="checkbox" id="studioHidden">
+              <span>숨김 상태로 올리기 — 갤러리에 바로 노출하지 않고 나중에 게시합니다</span>
+            </label>
+          </div>
+
+          <div class="sheet-actions">
+            <button class="btn btn-outline" type="button" id="studioCancel">다시 고르기</button>
+            <button class="btn btn-primary" type="submit" id="studioPublish">갤러리에 게시</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ── 관리 ── -->
+      <section class="studio-panel">
+        <p class="section-label">Published</p>
+        <h2 class="studio-title" style="font-size:1.3rem;">
+          게시된 순간 <span class="studio-count" id="studioManageCount"></span>
+        </h2>
+        <p class="studio-hint">숨김으로 두면 갤러리에서 보이지 않고, 삭제하면 이미지까지 함께 지워집니다.</p>
+        <div class="studio-manage" id="studioManage"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="moments-toast" id="studioToast" role="status" aria-live="polite"></div>
+
+  <script src="js/moments-config.js?v=20260822a"></script>
+  <script src="js/moments-core.js?v=20260822a"></script>
+  <script src="js/moments-studio.js?v=20260822a"></script>
+</body>
+</html>
